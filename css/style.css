@@ -226,6 +226,22 @@ body {
   float: right;
   width: 264px;
   margin-top: 30px; }
+  .category-food .pending {
+    width: 263px;
+    height: 70px;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999; }
+    .category-food .pending .title-category {
+      border-top: 3px solid #60BA62;
+      padding: 25px 20px; }
+  .category-food .food-list {
+    margin: 0;
+    padding: 0; }
+  .category-food .food-list-item {
+    display: block;
+    padding: 11px 20px;
+    border: 1px solid; }
 
 .newletter {
   width: 100%;

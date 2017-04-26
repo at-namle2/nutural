@@ -244,6 +244,27 @@
   float: right;
   width: 264px;
   margin-top: 30px;
+  .pending{
+    width: 263px;
+    height: 70px;
+    border-left: 1px solid map-get($color, gray_border_v1);
+    border-right: 1px solid map-get($color, gray_border_v1);
+    border-bottom: 1px solid map-get($color, gray_border_v1);
+    .title-category {
+      border-top: 3px solid map-get($color, green);
+      padding: 25px 20px;
+    }
+  }
+  .food-list {
+    margin: 0;
+    padding: 0;
+  }
+  .food-list-item {
+    display: block;
+    padding: 11px 20px;
+    border: 1px solid;
+  }
+
 }
 .newletter {
   width: 100%;
