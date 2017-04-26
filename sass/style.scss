@@ -1,0 +1,288 @@
+@import "global";
+
+.head_v1 {
+  background-color: map-get($color, gray_v1);
+  .language {
+    width: 694px;
+    height: 48px;
+    float: left;
+    background-color: map-get($color, gray_v1);
+    .btn-link {
+      padding-bottom: 12px;
+      padding-top: 12px;
+      color: map-get($color, white);
+      padding-right: 20px;
+      line-height: 21px;
+      background-color: map-get($color, gray_v1);
+      outline: none;
+      border: none;
+      font-size: 12px;
+    }
+    .name {
+      color: #60BA62;
+      font-weight: 700;
+    }
+  }
+  .seach {
+    width: 446px;
+    height: 48px;
+    float: right;
+    background-color: map-get($color, gray_v1);
+    position: relative;
+    .input-search {
+      border: none;
+      height: 48px;
+      line-height: 45px;
+      transition: all 0.35s ease 0s;
+      background-color: map-get($color, gray_v2);
+      width: 280px;
+      padding-left: 20px;
+      outline: none;
+      color: map-get($color, white);
+    }
+    .button-search {
+      position: absolute;
+      width: 49px;
+      height: 48px;
+      left: 250px;
+      outline: none;
+      border: none;
+      background-color: map-get($color, gray_v2);
+      color: map-get($color, white);
+      font-size: 14px;
+    }
+    .btn-card {
+      position: absolute;
+      width: 134px;
+      height: 48px;
+      left: 311px;
+      outline: none;
+      border: none;
+      color: map-get($color, white);
+      background-color: map-get($color, gray_v1);
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .fa-card {
+      font-size: 16px;
+      color: map-get($color, green);
+    }
+  }
+
+}
+
+.logo {
+  float: left;
+  width: 310px;
+  height: 94px;
+  img {
+    margin-top: 10px;
+  }
+}
+.nav-list {
+  height: 94px;
+  float: right;
+  .list {
+    margin-top: 30px;
+    padding: 0;
+  }
+  .list-item {
+    padding: 0 15px;
+    display: inline-block;
+    list-style: none;
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: map-get($color, black);
+    }
+  }
+}
+
+.banner {
+  background-image: url(../images/category.png);
+  background-repeat: no-repeat;
+  height: 300px;
+}
+
+
+/*section*/
+.natural-food {
+  float: left;
+  width: 850px;
+  margin-top: 30px;
+  .title-breakfas {
+    margin-bottom: 13px;
+    font-size: 30px;
+  }
+  .sort-by {
+    height: 80px;
+    text-transform: uppercase;
+    border-top: 1px solid map-get($color, gray_border);
+    border-bottom: 1px solid map-get($color, gray_border);
+    .btn-large {
+      padding: 7px;
+      font-size: 14px;
+      vertical-align: middle;
+      border: 1px solid map-get($color, gray_border);
+      background-color: map-get($color, green);
+      color: map-get($color, white);
+      line-height: 0;
+      outline: none;
+      margin-right: 3px;
+      margin: 25px 0;
+    }
+    .btn-list {
+      padding: 7px;
+      font-size: 14px;
+      vertical-align: middle;
+      border: 1px solid map-get($color, gray_border);
+      background-color: map-get($color, white);
+      color: map-get($color, gray_border_v1);
+      line-height: 0;
+      outline: none;
+      margin-right: 73px;
+    }
+    .compare {
+      display: block;
+      margin-top: -50px;
+      text-align: right;
+      text-transform: uppercase;
+      a {
+        text-decoration: none;
+        color: map-get($color, black);
+      }
+    }
+    .sort {
+      margin-right: 10px;
+    }
+    .selected {
+      height: 30px;
+      width: 17%;
+      background-color: map-get($color, white);
+      border: 1px solid map-get($color, gray_border);
+    }
+  }
+  .refine-search {
+    margin: 60px 0 30px;
+    .title-refine {
+      font-size: 30px;
+    }
+  .dress-list {
+    padding: 0;
+    margin-top: 20px;
+  }
+  .dress-list-item {
+    display: inline-block;
+    list-style: none;
+    margin-right: 300px;
+  }
+  .dress-list-item a {
+    text-decoration: none;
+    color: map-get($color, black);
+    font-weight: 600;
+  }
+}
+.product-block {
+  margin-top: 30px;
+ .gallery {
+  width: 100%;
+  width: 1000px;
+}
+.gallery-item {
+  width: 263px;
+  height: 450px;
+  margin-right: 30px;
+  float: left;
+  .titile-product {
+   padding: 10px 0 10px;
+   a {
+    text-decoration: none;
+    color: map-get($color, black);
+   }
+  }
+  .price {
+    padding: 4px 0;
+    .price-news {
+      color: map-get($color, green);
+    }
+    .price-old {
+      color: map-get($color, gray_border_v1);
+      font-size: 12px;
+      text-decoration: underline;
+      padding-left: 5px;
+    }
+  }
+  .rating {
+    .fa-star {
+      color: map-get($color, star);
+    }
+  }
+  .add-to-card {
+    width: 130px;
+    height: 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 7px;
+    color: map-get($color, gray_border_v1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .fa-add {
+    padding: 0 7px;
+    font-size: 14px;
+  }
+  img {
+    width: 100%;
+  }
+ }
+}
+
+}
+.category-food {
+  float: right;
+  width: 264px;
+  margin-top: 30px;
+}
+.newletter {
+  width: 100%;
+  background-color: red;
+  height: 300px;
+  margin-top: 150px;
+}
+
+/*footer*/
+
+.widget-about {
+  float: left;
+  height: 380px;
+  width: 260px;
+}
+
+.inforcus {
+  float: right;
+  height: 380px;
+  width: 680px;
+  .list-gallary {
+    width: 100%;
+  }
+  .list-gallary-item {
+    width: 190px;
+    height: 250px;
+    float: left;
+    margin: 0 15px;
+  }
+}
+
+.copy {
+ .copy-left {
+    float: left;
+    width: 450px;
+    height: 90px;
+    background-color: yellow;
+ }
+ .copy-right {
+    float: right;
+ }
+}

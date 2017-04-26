@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+$color: (
+  black: #000,
+  white: #fff,
+  title: #333,
+  green: #60BA62,
+  gray_v1: #363d43,
+  gray_v2: #2b3136,
+  gray_border: #E1E1E1,
+  gray_border_v1: #999,
+  star: #febd49,
+
+);
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'LeckerliOne';
+  font-weight: 500;
+  line-height: 1.1;
+  color: map-get($color, title);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1.88;
+  color: #999999;
+  background-color: #ffffff;
+  font-weight: 500;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  background-color: map-get($color, white);
+}
+
+.clear {
+  clear: both;
+}
+
+@font-face {
+  font-family: 'LeckerliOne';
+  src: url('../font/LeckerliOne.otf');
+ }
