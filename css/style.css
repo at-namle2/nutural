@@ -72,7 +72,8 @@ body {
       border: none;
       background-color: #2b3136;
       color: #fff;
-      font-size: 14px; }
+      font-size: 14px;
+      cursor: pointer; }
     .head_v1 .seach .btn-card {
       position: absolute;
       width: 134px;
@@ -229,19 +230,105 @@ body {
   .category-food .pending {
     width: 263px;
     height: 70px;
-    border-left: 1px solid #999;
-    border-right: 1px solid #999;
-    border-bottom: 1px solid #999; }
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1; }
     .category-food .pending .title-category {
       border-top: 3px solid #60BA62;
-      padding: 25px 20px; }
+      padding: 25px 20px;
+      font-size: 22px; }
   .category-food .food-list {
-    margin: 0;
+    margin-bottom: 30px;
     padding: 0; }
   .category-food .food-list-item {
     display: block;
-    padding: 11px 20px;
-    border: 1px solid; }
+    padding: 13px 20px;
+    border: 1px solid #e1e1e1;
+    margin-right: -1px; }
+    .category-food .food-list-item:hover {
+      background: #f1f1f1; }
+    .category-food .food-list-item a {
+      text-decoration: none;
+      color: #162119; }
+      .category-food .food-list-item a:hover {
+        color: #e1e1e1; }
+  .category-food .pend {
+    width: 263px;
+    height: 70px;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1; }
+    .category-food .pend .title-searching {
+      border-top: 3px solid #e1e1e1;
+      padding: 25px 20px;
+      font-size: 22px; }
+  .category-food .group-price {
+    display: block;
+    padding: 13px 20px;
+    border: 1px solid #e1e1e1;
+    margin-right: -1px; }
+    .category-food .group-price .fill-group {
+      margin-bottom: 35px;
+      margin-top: 10px; }
+      .category-food .group-price .fill-group .dolors {
+        margin: 0 0 18px; }
+      .category-food .group-price .fill-group .dolor {
+        display: inline-block;
+        margin: 0 10px; }
+    .category-food .group-price .price {
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #000; }
+    .category-food .group-price .btn-sm {
+      padding: 6px 10px;
+      font-size: 12px;
+      border-radius: none;
+      line-height: 1.5;
+      background-color: #60BA62;
+      color: #fff;
+      text-transform: uppercase;
+      outline: none;
+      border: none;
+      margin-bottom: 10px; }
+      .category-food .group-price .btn-sm:hover {
+        background-color: #46a148;
+        color: #fff;
+        border-color: 439a45; }
+  .category-food .special {
+    margin-top: 30px; }
+    .category-food .special .pendy {
+      width: 263px;
+      height: 70px;
+      border-left: 1px solid #e1e1e1;
+      border-right: 1px solid #e1e1e1;
+      border-bottom: 1px solid #e1e1e1; }
+      .category-food .special .pendy .title-special {
+        border-top: 3px solid #e1e1e1;
+        padding: 25px 20px;
+        font-size: 22px; }
+    .category-food .special .border-special {
+      border: 1px solid #e1e1e1;
+      margin-right: -1px;
+      height: 490px; }
+    .category-food .special .gallary-special {
+      width: 100%;
+      padding: 15px 25px; }
+    .category-food .special .gallary-special-item {
+      width: 110px;
+      height: 100px;
+      float: left;
+      margin-right: 10px;
+      margin: 6px 0 13px; }
+      .category-food .special .gallary-special-item a {
+        text-decoration: none; }
+      .category-food .special .gallary-special-item img {
+        width: 84px;
+        height: 84px; }
+      .category-food .special .gallary-special-item .price-ness {
+        color: #60BA62; }
+      .category-food .special .gallary-special-item .fa-star {
+        color: #febd49; }
 
 .newletter {
   width: 100%;

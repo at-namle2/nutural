@@ -50,6 +50,7 @@
       background-color: map-get($color, gray_v2);
       color: map-get($color, white);
       font-size: 14px;
+      cursor: pointer;
     }
     .btn-card {
       position: absolute;
@@ -185,9 +186,9 @@
 .product-block {
   margin-top: 30px;
  .gallery {
-  width: 100%;
-  width: 1000px;
-}
+    width: 100%;
+    width: 1000px;
+  }
 .gallery-item {
   width: 263px;
   height: 450px;
@@ -247,22 +248,130 @@
   .pending{
     width: 263px;
     height: 70px;
-    border-left: 1px solid map-get($color, gray_border_v1);
-    border-right: 1px solid map-get($color, gray_border_v1);
-    border-bottom: 1px solid map-get($color, gray_border_v1);
+    border-left: 1px solid map-get($color, gray_ao);
+    border-right: 1px solid map-get($color, gray_ao);
+    border-bottom: 1px solid map-get($color, gray_ao);
     .title-category {
       border-top: 3px solid map-get($color, green);
       padding: 25px 20px;
+     font-size: 22px;
     }
   }
   .food-list {
-    margin: 0;
+    margin-bottom: 30px;
     padding: 0;
   }
   .food-list-item {
     display: block;
-    padding: 11px 20px;
-    border: 1px solid;
+    padding: 13px 20px;
+    border: 1px solid map-get($color, gray_ao);
+    margin-right: -1px;
+    &:hover {
+        background: map-get($color, gray_amo);
+     }
+    a {
+      text-decoration: none;
+      color: map-get($color, black_mo);  
+      &:hover {
+        color: map-get($color, gray_ao);
+      }
+    }
+  }
+   .pend {
+    width: 263px;
+    height: 70px;
+    border-left: 1px solid map-get($color, gray_ao);
+    border-right: 1px solid map-get($color, gray_ao);
+    border-bottom: 1px solid map-get($color, gray_ao);
+    .title-searching {
+      border-top: 3px solid map-get($color, gray_ao);
+      padding: 25px 20px;
+      font-size: 22px;
+    }
+  }
+  .group-price {
+    display: block;
+    padding: 13px 20px;
+    border: 1px solid map-get($color, gray_ao);
+    margin-right: -1px;
+    .fill-group {
+      margin-bottom: 35px;
+      margin-top: 10px;
+      .dolors {
+        margin: 0 0 18px;
+      }
+      .dolor {
+        display: inline-block;
+        margin: 0 10px;
+      }
+    }
+  .price {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: map-get($color, black);
+    }
+   .btn-sm {
+     padding: 6px 10px;
+     font-size: 12px;
+     border-radius: none;
+     line-height: 1.5;
+     background-color: map-get($color, green);
+     color: map-get($color, white);
+     text-transform: uppercase;
+     outline: none;
+     border: none;
+     margin-bottom: 10px;
+     &:hover {
+      background-color:map-get($color, green_1);
+      color: map-get($color, white);
+      border-color: map-get($color, green_2);
+     }
+   } 
+  }
+  .special {
+    margin-top: 30px;
+    .pendy {
+      width: 263px;
+      height: 70px;
+      border-left: 1px solid map-get($color, gray_ao);
+      border-right: 1px solid map-get($color, gray_ao);
+      border-bottom: 1px solid map-get($color, gray_ao);
+      .title-special {
+      border-top: 3px solid map-get($color, gray_ao);
+      padding: 25px 20px;
+      font-size: 22px;
+    }
+    }
+    .border-special {
+      border: 1px solid map-get($color, gray_ao);
+      margin-right: -1px;
+      height: 490px;
+    }
+    .gallary-special {
+      width: 100%;
+      padding: 15px 25px
+    }
+    .gallary-special-item {
+      width: 110px;
+      height: 100px;
+      float: left;
+      margin-right: 10px;
+      margin: 6px 0 13px;
+      a {
+        text-decoration: none;
+      }
+      img {
+        width: 84px;
+        height: 84px;
+      }
+      .price-ness {
+          color: map-get($color, green);
+      }
+      .fa-star {
+        color: map-get($color, star);
+      }
+    }
   }
 
 }
