@@ -47,8 +47,24 @@
           <ul class="list">
             <li class="list-item"><a href="">home</a></li>
             <li class="list-item"><a href="">shop</a></li>
-            <li class="list-item"><a href="">pages</a></li>
-            <li class="list-item"><a href="">new arrival</a></li>
+            <li class="list-item"><a href="">pages<i class="fa fa-caret-down"></i></a>
+              <ul class="sub-menu">
+                <li class="sub-menu-item"><a href="#">Fashion</a></li>
+                <li class="sub-menu-item"><a href="#">Modern Classics</a></li>
+                <li class="sub-menu-item"><a href="#">Party</a></li>
+                <li class="sub-menu-item"><a href="#">Divided</a></li>
+                <li class="sub-menu-item"><a href="#">Accessories</a></li>
+              </ul>
+            </li>
+            <li class="list-item"><a href="">new arrival<i class="fa fa-caret-down"></i></a>
+              <ul class="sub-menu">
+                <li class="sub-menu-item"><a href="#">Everyday Fashion</a></li>
+                <li class="sub-menu-item"><a href="#">Modern Classics</a></li>
+                <li class="sub-menu-item"><a href="#">Party</a></li>
+                <li class="sub-menu-item"><a href="#">Divided</a></li>
+                <li class="sub-menu-item"><a href="#">Accessories</a></li>
+              </ul>
+            </li>
             <li class="list-item"><a href="">blog</a></li>
             <li class="list-item"><a href="">on sale</a></li>
             <li class="list-item"><a href="">contact us</a></li>
@@ -57,10 +73,14 @@
         <div class="clear"></div>
       </div>
       <div class="banner">
-          <ul class="">
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-          </ul>
+        <div class="container">
+          <div class="baner">
+            <ul class="list-banner">
+              <li class="list-banner-item"><a href=""><i class="fa fa-home"><strong>&rsaquo;</strong></i></a></li>
+              <li class="list-banner-item"><a href="">Breakfast foods</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <section>
@@ -79,19 +99,27 @@
             </ul>
           </div>
           <div class="sort-by">
-              <button type="button" class="btn-large">
+              <button type="button" class="btn-large tooltip" >
                 <i class="fa fa-th-large"></i>
+                <span class="tooltiptext">Grid</span>
               </button>
               <button type="button" class="btn-list">
                 <i class="fa fa-th-list"></i>
               </button>
                <span class="sort">sort by:
                  <select class="selected">
-                  <option value="">english</option>
-                  <option value="">Japan</option>
+                  <option value="">Default</option>
+                  <option value="">Name (A-Z)</option>
+                  <option value="">Name (Z-A)</option>
+                  <option value="">Price (Low-Height)</option>
+                  <option value="">Price (Height-Low)</option>
+                  <option value="">Rating (Heightest)</option>
+                  <option value="">Price (Lowest)</option>
+                  <option value="">Model (A-Z)</option>
+                  <option value="">Model (Z-A)</option>
                 </select>
-              </span>
-               <span>Shows:
+               </span>
+               <span class="shows">Shows:
                  <select class="selected">
                   <option value="">15</option>
                   <option value="">25</option>
@@ -105,7 +133,18 @@
           <div class="product-block">
             <div class="gallery">
               <div class="gallery-item">
-                <a href=""><img src="images/product1.png" alt="product1"></a>
+                <div class="content">
+                  <a href=""><img src="images/product1.png" alt="product1" class="img"></a>
+                  <div class="overlay">
+                    <div class="text"><a href=""><i class="fa fa-external-link"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-search"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-exchange"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-heart"></i></a></div>
+                  </div>
+                </div>
+                <div class="sale">
+                  <p class="sales">Sale</p>
+                </div>
                 <p class="titile-product"><a href="">Asus - 15.6 Laptop</a></p>
                 <div class="price">
                   <span class="price-news">$20.00</span>
@@ -121,8 +160,19 @@
                 <button type="button" class="add-to-card"><i class="fa fa-shopping-cart fa-add"></i>add to card</button>
               </div>
               <div class="gallery-item">
-                <a href=""><img src="images/product2.png" alt="product1"></a>
-                <p class="titile-product"><a href="">Asus - 15.6 Laptop</a></p>
+                <div class="content">
+                  <a href=""><img src="images/product2.png" alt="product1" class="img"></a>
+                  <div class="overlay">
+                    <div class="text"><a href=""><i class="fa fa-external-link"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-search"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-exchange"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-heart"></i></a></div>
+                  </div>
+                </div>
+                 <div class="sale">
+                  <p class="sales">Sale</p>
+                </div>
+                <p class="titile-product"><a href="">Bar - Electra</a></p>
                 <div class="price">
                   <span class="price-news">$20.00</span>
                   <span class="price-old">$122.00</span>
@@ -137,8 +187,19 @@
                 <button type="button" class="add-to-card"><i class="fa fa-shopping-cart fa-add"></i>add to card</button>
               </div>
               <div class="gallery-item">
-                <a href=""><img src="images/product3.png" alt="product1"></a>
-                <p class="titile-product"><a href="">Asus - 15.6 Laptop</a></p>
+                 <div class="content">
+                  <a href=""><img src="images/product1.png" alt="product3" class="img"></a>
+                  <div class="overlay">
+                    <div class="text"><a href=""><i class="fa fa-external-link"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-search"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-exchange"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-heart"></i></a></div>
+                  </div>
+                </div>
+                 <div class="sale">
+                  <p class="sales">Sale</p>
+                </div>
+                <p class="titile-product"><a href="">Chairs pink for home</a></p>
                 <div class="price">
                   <span class="price-news">$20.00</span>
                   <span class="price-old">$122.00</span>
@@ -156,8 +217,16 @@
             <!-- gallery1 -->
             <div class="gallery">
               <div class="gallery-item">
-                <a href=""><img src="images/product4.png" alt="product1"></a>
-                <p class="titile-product"><a href="">Asus - 15.6 Laptop</a></p>
+                <div class="content">
+                  <a href=""><img src="images/product4.png" alt="product4" class="img"></a>
+                  <div class="overlay">
+                    <div class="text"><a href=""><i class="fa fa-external-link"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-search"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-exchange"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-heart"></i></a></div>
+                  </div>
+                </div>
+                <p class="titile-product"><a href="">Cutie Floral Lace Shift Dress</a></p>
                 <div class="price">
                   <span class="price-news">$20.00</span>
                   <span class="price-old">$122.00</span>
@@ -172,8 +241,16 @@
                 <button type="button" class="add-to-card"><i class="fa fa-shopping-cart fa-add"></i>add to card</button>
               </div>
               <div class="gallery-item">
-                <a href=""><img src="images/product5.png" alt="product1"></a>
-                <p class="titile-product"><a href="">Asus - 15.6 Laptop</a></p>
+                <div class="content">
+                  <a href=""><img src="images/product1.png" alt="product5" class="img"></a>
+                  <div class="overlay">
+                    <div class="text"><a href=""><i class="fa fa-external-link"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-search"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-exchange"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-heart"></i></a></div>
+                  </div>
+                </div>
+                <p class="titile-product"><a href="">Cutie Textured Halterneck Dress</a></p>
                 <div class="price">
                   <span class="price-news">$20.00</span>
                   <span class="price-old">$122.00</span>
@@ -188,8 +265,19 @@
                 <button type="button" class="add-to-card"><i class="fa fa-shopping-cart fa-add"></i>add to card</button>
               </div>
               <div class="gallery-item">
-                <a href=""><img src="images/product6.png" alt="product1"></a>
-                <p class="titile-product"><a href="">Asus - 15.6 Laptop</a></p>
+                <div class="content">
+                  <a href=""><img src="images/product6.png" alt="product1" class="img"></a>
+                  <div class="overlay">
+                    <div class="text"><a href=""><i class="fa fa-external-link"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-search"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-exchange"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-heart"></i></a></div>
+                  </div>
+                </div>
+                <div class="sale">
+                  <p class="sales">Sale</p>
+                </div>
+                <p class="titile-product"><a href="">Dell Inspiron 20 3059 19 5</a></p>
                 <div class="price">
                   <span class="price-news">$20.00</span>
                   <span class="price-old">$122.00</span>
@@ -207,8 +295,16 @@
             <!-- gallery2 -->
             <div class="gallery">
               <div class="gallery-item">
-                <a href=""><img src="images/product7.png" alt="product1"></a>
-                <p class="titile-product"><a href="">Asus - 15.6 Laptop</a></p>
+                <div class="content">
+                  <a href=""><img src="images/product7.png" alt="product1" class="img"></a>
+                  <div class="overlay">
+                    <div class="text"><a href=""><i class="fa fa-external-link"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-search"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-exchange"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-heart"></i></a></div>
+                  </div>
+                </div>
+                <p class="titile-product"><a href="">Eye Cream for Wrinkles Dark</a></p>
                 <div class="price">
                   <span class="price-news">$20.00</span>
                   <span class="price-old">$122.00</span>
@@ -223,8 +319,19 @@
                 <button type="button" class="add-to-card"><i class="fa fa-shopping-cart fa-add"></i>add to card</button>
               </div>
               <div class="gallery-item">
-                <a href=""><img src="images/product8.png" alt="product1"></a>
-                <p class="titile-product"><a href="">Asus - 15.6 Laptop</a></p>
+                <div class="content">
+                  <a href=""><img src="images/product8.png" alt="product1" class="img"></a>
+                  <div class="overlay">
+                    <div class="text"><a href=""><i class="fa fa-external-link"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-search"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-exchange"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-heart"></i></a></div>
+                  </div>
+                </div>
+                 <div class="sale">
+                  <p class="sales">Sale</p>
+                </div>
+                <p class="titile-product"><a href="">Ulefone Paris - Outras marcas</a></p>
                 <div class="price">
                   <span class="price-news">$20.00</span>
                   <span class="price-old">$122.00</span>
@@ -239,8 +346,16 @@
                 <button type="button" class="add-to-card"><i class="fa fa-shopping-cart fa-add"></i>add to card</button>
               </div>
               <div class="gallery-item">
-                <a href=""><img src="images/product9.png" alt="product1"></a>
-                <p class="titile-product"><a href="">Asus - 15.6 Laptop</a></p>
+                <div class="content">
+                  <a href=""><img src="images/product9.png" alt="product1" class="img"></a>
+                  <div class="overlay">
+                    <div class="text"><a href=""><i class="fa fa-external-link"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-search"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-exchange"></i></a></div>
+                    <div class="text"><a href=""><i class="fa fa-heart"></i></a></div>
+                  </div>
+                </div>
+                <p class="titile-product"><a href="">Una table 2_resize</a></p>
                 <div class="price">
                   <span class="price-news">$20.00</span>
                   <span class="price-old">$122.00</span>
@@ -255,6 +370,9 @@
                 <button type="button" class="add-to-card"><i class="fa fa-shopping-cart fa-add"></i>add to card</button>
               </div>
             </div>
+          </div>
+          <div class="text-showing">
+            <p>Showing 1 to 9 of 9 (1 Pages)</p>
           </div>
         </div>
         <div class="category-food">
@@ -273,33 +391,33 @@
             <li class="food-list-item"><a href="">Meal essentials (12)</a></li>
           </ul>
           <div class="refine-seaching">
-          <div class="pend">
-            <h3 class="title-searching">Refine Search</h3>
-          </div>
-          <div class="group-price">
-            <a href="#" class="price">Price</a>
-            <div class="fill-group">
-              <label><input type="checkbox" class="dolors"><span class="dolor"> $35-$75 (7) </span></label><br>
-              <label><input type="checkbox" class="dolors"><span class="dolor">$75-$125 (7) </span></label><br>
-              <label><input type="checkbox" class="dolors"><span class="dolor">$125-$225 (7)</span></label>
+            <div class="pend">
+              <h3 class="title-searching">Refine Search</h3>
             </div>
-            <a href="#" class="price">Price</a>
-            <div class="fill-group">
-              <label><input type="checkbox"><span class="dolor"> Black (6) </span></label><br>
-              <label><input type="checkbox"> White (4) </label><br>
-              <label><input type="checkbox"> Blue (5)</label><br>
-              <label><input type="checkbox"> Red (6)</label><br>
-              <label><input type="checkbox"> Yellow (4)</label>
+            <div class="group-price">
+              <a href="#" class="price">Price</a>
+              <div class="fill-group">
+                <label><input type="checkbox" class="dolors"><span class="dolor"> $35-$75 (7) </span></label><br>
+                <label><input type="checkbox" class="dolors"><span class="dolor">$75-$125 (7) </span></label><br>
+                <label><input type="checkbox" class="dolors"><span class="dolor">$125-$225 (7)</span></label>
+              </div>
+              <a href="#" class="price">Color</a>
+              <div class="fill-group">
+                <label><input type="checkbox"><span class="dolor"> Black (6) </span></label><br>
+                <label><input type="checkbox"> White (4) </label><br>
+                <label><input type="checkbox"> Blue (5)</label><br>
+                <label><input type="checkbox"> Red (6)</label><br>
+                <label><input type="checkbox"> Yellow (4)</label>
+              </div>
+              <a href="#" class="price">Size</a>
+              <div class="fill-group">
+                <label><input type="checkbox"><span class="dolor">XS (8) </span></label><br>
+                <label><input type="checkbox"> M (7) </label><br>
+                <label><input type="checkbox"> XL (5)</label><br>
+                <label><input type="checkbox"> XXL (7)</label>
+              </div>
+              <button type="button" class="btn-sm">Refine Search</button>
             </div>
-            <a href="#" class="price">Size</a>
-            <div class="fill-group">
-              <label><input type="checkbox"><span class="dolor">XS (8) </span></label><br>
-              <label><input type="checkbox"> M (7) </label><br>
-              <label><input type="checkbox"> XL (5)</label><br>
-              <label><input type="checkbox"> XXL (7)</label>
-            </div>
-            <button type="button" class="btn-sm">Refine Search</button>
-          </div>
          </div>
          <div class="special">
            <div class="pendy">
@@ -323,16 +441,16 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o"></i>
                   </div>
-                </div>             
+                </div>
               </div>
               <div class="gallary-special">
                 <div class="gallary-special-item">
                     <img src="images/special2.png" alt="">
                 </div>
                 <div class="gallary-special-item">
-                    <p class="titile-products"><a href="">Asus - 15.6 Laptop</a></p>
+                    <p class="titile-products"><a href="">Bar - Electra</a></p>
                   <div class="price">
-                    <span class="price-ness">$20.00</span>
+                    <span class="price-ness">$110.00</span>
                     <span class="price-olds">$122.00</span>
                   </div>
                   <div class="rating">
@@ -342,17 +460,17 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star-o"></i>
                   </div>
-                </div>             
+                </div>
               </div>
               <div class="gallary-special">
                 <div class="gallary-special-item">
                     <img src="images/special3.png" alt="">
                 </div>
                 <div class="gallary-special-item">
-                    <p class="titile-products"><a href="">Asus - 15.6 Laptop</a></p>
+                    <p class="titile-products"><a href="">Chairs pink for home</a></p>
                   <div class="price">
-                    <span class="price-ness">$20.00</span>
-                    <span class="price-olds">$122.00</span>
+                    <span class="price-ness">$26.00</span>
+                    <span class="price-olds">$602.00</span>
                   </div>
                   <div class="rating">
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -361,16 +479,16 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                   </div>
-                </div>             
+                </div>
               </div>
               <div class="gallary-special">
                 <div class="gallary-special-item">
                     <img src="images/special4.png" alt="">
                 </div>
                 <div class="gallary-special-item">
-                    <p class="titile-products"><a href="">Asus - 15.6 Laptop</a></p>
+                  <p class="titile-products"><a href="">Dell Inspiron 20 3059 19 5</a></p>
                   <div class="price">
-                    <span class="price-ness">$20.00</span>
+                    <span class="price-ness">$98.00</span>
                     <span class="price-olds">$122.00</span>
                   </div>
                   <div class="rating">
@@ -380,77 +498,80 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                   </div>
-                </div>             
-              </div>
+                </div>
+                <div class="clear"></div>
+            </div>
           </div>
          </div>
         </div>
       </div>
       <div class="clear"></div>
-    </section>
-    <section>
-      <div class="container">
-        <div class="newletter">
-            <h3>Newsletter</h3>
-            <p>A newsletter is a regularly distributed publication that is generally about one main<br> topic of interest to its subscribers.</p>
-          <input type="" name="">
-          <button type=""></button>
+      <!-- full-newletter -->
+      <div class="full-newletter">
+        <div class="container">
+          <div class="newletter">
+              <h3 class="title-newletter">Newsletter</h3>
+              <p class="text-newletter">A newsletter is a regularly distributed publication that is generally about one main<br> topic of interest to its subscribers.</p>
+              <div class="contact-email">
+                 <input type="text" name="" class="input-email">
+                 <button type="button" class="button-subscribe">subscribe</button>
+              </div>
+          </div>
         </div>
       </div>
     </section>
     <footer>
-      <div class="container">
-        <div class="widget-about">
-        <ul>
-          <li><a href="#">Brands</a></li>
-          <li><a href="#">Brands</a></li>
-          <li><a href="#">Brands</a></li>
-          <li><a href="#">Brands</a></li>
-          <li><a href="#">Brands</a></li>
-          <li><a href="#">Brands</a></li>
-        </ul>
-        </div>
-        <div class="inforcus">
-          <div class="list-gallary">
-            <div class="list-gallary-item">
-              <h5 class="panel-title">Extras</h5>
-              <ul>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">Brands</a></li>
-              </ul>
-            </div>
-            <div class="list-gallary-item">
-              <h5 class="panel-title">Extras</h5>
-              <ul>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">Brands</a></li>
-              </ul>
-            </div>
-            <div class="list-gallary-item">
-              <h5 class="panel-title">Extras</h5>
-              <ul>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">Brands</a></li>
-                <li><a href="#">Brands</a></li>
-              </ul>
+      <div class="footer-content">
+          <div class="container">
+          <div class="widget-about">
+            <h5 class="panel-title">class us</h5>
+            <ul class="list-us">
+              <li class="list-us-item"><i class="fa fa-clock-o fa-log"></i><span>Mon-thu: 11.00 – 23.00<br>Sat: 12.00 – 23.00<br>Sun: 12.00 – 21.00</span></li>
+              <li class="list-us-item"><i class="fa fa-bookmark-o fa-log"></i><span>60 East 65th Street <br>New York City NY 10065</span></li>
+              <li class="list-us-item"><i class="fa fa-phone fa-log"></i><span>+012 345 678<br>+012 678 912</span></li>
+            </ul>
+          </div>
+          <div class="inforcus">
+            <div class="list-gallary">
+              <div class="list-gallary-item">
+                <h5 class="panel-title">Extras</h5>
+                <ul class="list-extras">
+                  <li class="list-extras-item"><a href="#">Brands</a></li>
+                  <li class="list-extras-item"><a href="#">Gift Certificates</a></li>
+                  <li class="list-extras-item"><a href="#">Affiliates</a></li>
+                  <li class="list-extras-item"><a href="#">Specials</a></li>
+                  <li class="list-extras-item"><a href="#">Site Map</a></li>
+                </ul>
+              </div>
+              <div class="list-gallary-item infor">
+                <h5 class="panel-title">Information</h5>
+                <ul class="list-extras">
+                  <li class="list-extras-item"><a href="#">About Us</a></li>
+                  <li class="list-extras-item"><a href="#">Delivery Information</a></li>
+                  <li class="list-extras-item"><a href="#">Privacy Policy</a></li>
+                  <li class="list-extras-item"><a href="#">Terms & Conditions</a></li>
+                  <li class="list-extras-item"><a href="#">Brands</a></li>
+                </ul>
+              </div>
+              <div class="list-gallary-item">
+                <h5 class="panel-title">Customer Service</h5>
+                <ul class="list-extras">
+                  <li class="list-extras-item"><a href="#">Contact Us</a></li>
+                  <li class="list-extras-item"><a href="#">Returns</a></li>
+                  <li class="list-extras-item"><a href="#">Brands</a></li>
+                  <li class="list-extras-item"><a href="#">Brands</a></li>
+                  <li class="list-extras-item"><a href="#">Gift Certificates</a></li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="clear"></div>
-        <div class="copy">
-            <p class="copy-left">Copyright 2016 - <a href="">Natural Food</a> - All rights sered. Powered by <br><a href="">BringThemes.com</a></p>
-            <p class="copy-right"><img src="images/payment.png" alt=""></p>
+          <div class="clear"></div>
+       </div>
+      </div>
+      <div class="copy">
+        <div class="container">
+          <p class="copy-left">Copyright 2016 - <a href="">Natural Food</a> - All rights sered. Powered by <br><a href="">BringThemes.com</a></p>
+          <p class="copy-right"><img src="images/payment.png" alt=""></p>
         </div>
       </div>
     </footer>

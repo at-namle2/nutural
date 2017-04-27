@@ -12,14 +12,13 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   line-height: 1.88;
-  color: #999999;
-  background-color: #ffffff;
+  color: #999;
+  background-color: #fff;
   font-weight: 500; }
 
 .container {
   width: 1140px;
-  margin: 0 auto;
-  background-color: #fff; }
+  margin: 0 auto; }
 
 .clear {
   clear: both; }
@@ -43,7 +42,8 @@ body {
       background-color: #363d43;
       outline: none;
       border: none;
-      font-size: 12px; }
+      font-size: 12px;
+      cursor: pointer; }
     .head_v1 .language .name {
       color: #60BA62;
       font-weight: 700; }
@@ -62,7 +62,8 @@ body {
       width: 280px;
       padding-left: 20px;
       outline: none;
-      color: #fff; }
+      color: #fff;
+      text-indent: 2%; }
     .head_v1 .seach .button-search {
       position: absolute;
       width: 49px;
@@ -103,18 +104,70 @@ body {
     margin-top: 30px;
     padding: 0; }
   .nav-list .list-item {
-    padding: 0 15px;
+    position: relative;
+    padding: 0 11px;
     display: inline-block;
     list-style: none; }
     .nav-list .list-item a {
       text-decoration: none;
       text-transform: uppercase;
       color: #000; }
+      .nav-list .list-item a:hover {
+        color: #439a45; }
+  .nav-list .sub-menu {
+    position: absolute;
+    display: none;
+    width: 200px;
+    height: 210px;
+    background-color: #fff;
+    padding: 5px 20px;
+    top: 26px;
+    left: 0;
+    list-style: none;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.75); }
+    .nav-list .sub-menu .sub-menu-item {
+      border-bottom: 1px dotted #e1e1e1; }
+      .nav-list .sub-menu .sub-menu-item a {
+        color: #1a1a1a;
+        padding: 5px 20px;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        text-transform: lowercase;
+        font-size: 14px;
+        text-align: left;
+        text-transform: capitalize; }
+        .nav-list .sub-menu .sub-menu-item a:hover {
+          color: #439a45; }
+  .nav-list .list-item:hover .sub-menu {
+    display: block; }
 
 .banner {
   background-image: url(../images/category.png);
   background-repeat: no-repeat;
-  height: 300px; }
+  height: 100px; }
+  .banner .baner {
+    display: block;
+    text-align: center; }
+    .banner .baner .list-banner {
+      margin: 0;
+      padding: 0;
+      padding-top: 38px; }
+      .banner .baner .list-banner .list-banner-item {
+        list-style: none;
+        display: inline-block;
+        margin: 0 5px; }
+        .banner .baner .list-banner .list-banner-item .fa-home {
+          color: #999; }
+          .banner .baner .list-banner .list-banner-item .fa-home:hover {
+            color: #439a45; }
+          .banner .baner .list-banner .list-banner-item .fa-home strong {
+            padding: 0 6px;
+            font-size: 20px; }
+        .banner .baner .list-banner .list-banner-item a {
+          text-decoration: none;
+          color: #439a45; }
 
 /*section*/
 .natural-food {
@@ -139,7 +192,35 @@ body {
       line-height: 0;
       outline: none;
       margin-right: 3px;
-      margin: 25px 0; }
+      margin: 25px 0;
+      cursor: pointer; }
+    .natural-food .sort-by .tooltip {
+      position: relative;
+      display: inline-block; }
+      .natural-food .sort-by .tooltip .tooltiptext {
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        background-color: red;
+        color: #fff;
+        z-index: 1;
+        bottom: 125%;
+        left: 98%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 1s; }
+        .natural-food .sort-by .tooltip .tooltiptext:hover {
+          visibility: visible;
+          opacity: 1; }
+        .natural-food .sort-by .tooltip .tooltiptext:after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent; }
     .natural-food .sort-by .btn-list {
       padding: 7px;
       font-size: 14px;
@@ -149,7 +230,8 @@ body {
       color: #999;
       line-height: 0;
       outline: none;
-      margin-right: 73px; }
+      margin-right: 73px;
+      cursor: pointer; }
     .natural-food .sort-by .compare {
       display: block;
       margin-top: -50px;
@@ -159,12 +241,19 @@ body {
         text-decoration: none;
         color: #000; }
     .natural-food .sort-by .sort {
-      margin-right: 10px; }
+      margin-right: 10px;
+      color: #000;
+      font-size: 12px; }
+    .natural-food .sort-by .shows {
+      color: #000;
+      font-size: 12px; }
     .natural-food .sort-by .selected {
       height: 30px;
       width: 17%;
       background-color: #fff;
-      border: 1px solid #E1E1E1; }
+      border: 1px solid #E1E1E1;
+      outline: none;
+      color: #999; }
   .natural-food .refine-search {
     margin: 60px 0 30px; }
     .natural-food .refine-search .title-refine {
@@ -181,20 +270,70 @@ body {
       color: #000;
       font-weight: 600; }
   .natural-food .product-block {
-    margin-top: 30px; }
+    margin-top: 30px;
+    height: 1370px;
+    border-bottom: 1px solid #E1E1E1; }
     .natural-food .product-block .gallery {
       width: 100%;
-      width: 1000px; }
+      width: 1000px;
+      position: relative; }
     .natural-food .product-block .gallery-item {
       width: 263px;
-      height: 450px;
       margin-right: 30px;
-      float: left; }
+      float: left;
+      height: 465px; }
+      .natural-food .product-block .gallery-item .sale {
+        position: relative; }
+        .natural-food .product-block .gallery-item .sale .sales {
+          color: #fff;
+          font-size: 11px;
+          position: absolute;
+          bottom: 230px;
+          background: #60BA62;
+          left: 10px;
+          height: 20px;
+          line-height: 20px;
+          padding: 0px 10px; }
+      .natural-food .product-block .gallery-item .content {
+        position: relative;
+        display: block;
+        text-align: center;
+        padding-top: 0 5px; }
+        .natural-food .product-block .gallery-item .content .img {
+          display: block;
+          width: 100%;
+          height: auto; }
+        .natural-food .product-block .gallery-item .content .overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: rgba(0, 0, 0, 0.5);
+          overflow: hidden;
+          width: 100%;
+          height: 0;
+          transition: .5s ease;
+          font-size: 12px; }
+          .natural-food .product-block .gallery-item .content .overlay .text {
+            display: inline-block;
+            overflow: hidden;
+            top: -4%;
+            left: 8px;
+            font-size: 20px;
+            padding: 4px 4px; }
+            .natural-food .product-block .gallery-item .content .overlay .text a {
+              color: #fff; }
+              .natural-food .product-block .gallery-item .content .overlay .text a:hover {
+                color: #439a45; }
+        .natural-food .product-block .gallery-item .content:hover .overlay {
+          height: 15%; }
       .natural-food .product-block .gallery-item .titile-product {
-        padding: 10px 0 10px; }
+        padding: 10px 0 1px; }
         .natural-food .product-block .gallery-item .titile-product a {
           text-decoration: none;
           color: #000; }
+          .natural-food .product-block .gallery-item .titile-product a:hover {
+            color: #439a45; }
       .natural-food .product-block .gallery-item .price {
         padding: 4px 0; }
         .natural-food .product-block .gallery-item .price .price-news {
@@ -216,17 +355,25 @@ body {
         border: 1px solid rgba(0, 0, 0, 0.1);
         background: none;
         outline: none;
-        cursor: pointer; }
+        cursor: pointer;
+        margin-bottom: 30px; }
+        .natural-food .product-block .gallery-item .add-to-card:hover {
+          background-color: #439a45;
+          color: #fff; }
       .natural-food .product-block .gallery-item .fa-add {
         padding: 0 7px;
         font-size: 14px; }
       .natural-food .product-block .gallery-item img {
         width: 100%; }
+  .natural-food .text-showing {
+    text-align: right;
+    margin-top: 30px; }
 
 .category-food {
   float: right;
   width: 264px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  margin-right: -10px; }
   .category-food .pending {
     width: 263px;
     height: 70px;
@@ -244,14 +391,14 @@ body {
     display: block;
     padding: 13px 20px;
     border: 1px solid #e1e1e1;
-    margin-right: -1px; }
+    margin-right: -1px;
+    cursor: pointer; }
     .category-food .food-list-item:hover {
-      background: #f1f1f1; }
+      background: #f1f1f1;
+      color: #e1e1e1; }
     .category-food .food-list-item a {
       text-decoration: none;
       color: #162119; }
-      .category-food .food-list-item a:hover {
-        color: #e1e1e1; }
   .category-food .pend {
     width: 263px;
     height: 70px;
@@ -277,7 +424,7 @@ body {
         margin: 0 10px; }
     .category-food .group-price .price {
       font-size: 16px;
-      font-weight: 600;
+      font-weight: 500;
       text-decoration: none;
       color: #000; }
     .category-food .group-price .btn-sm {
@@ -294,7 +441,7 @@ body {
       .category-food .group-price .btn-sm:hover {
         background-color: #46a148;
         color: #fff;
-        border-color: 439a45; }
+        border-color: #439a45; }
   .category-food .special {
     margin-top: 30px; }
     .category-food .special .pendy {
@@ -321,45 +468,155 @@ body {
       margin-right: 10px;
       margin: 6px 0 13px; }
       .category-food .special .gallary-special-item a {
-        text-decoration: none; }
+        text-decoration: none;
+        color: #162118; }
+        .category-food .special .gallary-special-item a:hover {
+          color: #439a45; }
       .category-food .special .gallary-special-item img {
         width: 84px;
         height: 84px; }
       .category-food .special .gallary-special-item .price-ness {
-        color: #60BA62; }
+        color: #439a45;
+        font-size: 16px; }
+      .category-food .special .gallary-special-item .price-olds {
+        font-size: 12px;
+        text-decoration: underline; }
       .category-food .special .gallary-special-item .fa-star {
         color: #febd49; }
 
-.newletter {
-  width: 100%;
-  background-color: red;
-  height: 300px;
-  margin-top: 150px; }
+/* full-newletter*/
+.full-newletter {
+  background-image: url(../images/newletter.png);
+  background-repeat: no-repeat;
+  height: 300px; }
+  .full-newletter .newletter {
+    width: 100%;
+    height: 300px;
+    margin-top: 60px;
+    display: block;
+    text-align: center; }
+    .full-newletter .newletter .title-newletter {
+      color: #fff;
+      font-size: 30px;
+      margin: 0;
+      padding-top: 60px;
+      line-height: 1.5; }
+    .full-newletter .newletter .text-newletter {
+      color: #fff;
+      margin-top: 26px;
+      margin-bottom: 24px; }
+  .full-newletter .contact-email {
+    position: relative; }
+    .full-newletter .contact-email .input-email {
+      position: absolute;
+      height: 46px;
+      width: 32%;
+      left: 315px;
+      border: none;
+      outline: none;
+      text-indent: 5%;
+      color: #999; }
+    .full-newletter .contact-email .button-subscribe {
+      position: absolute;
+      height: 46px;
+      width: 13%;
+      right: 312px;
+      border: none;
+      outline: none;
+      background: #439a45;
+      text-transform: uppercase;
+      color: #fff;
+      cursor: pointer;
+      font-size: 14px; }
+      .full-newletter .contact-email .button-subscribe:hover {
+        background-color: #46a148; }
 
 /*footer*/
-.widget-about {
-  float: left;
-  height: 380px;
-  width: 260px; }
-
-.inforcus {
-  float: right;
-  height: 380px;
-  width: 680px; }
-  .inforcus .list-gallary {
-    width: 100%; }
-  .inforcus .list-gallary-item {
-    width: 190px;
-    height: 250px;
+.footer-content {
+  background-color: #1a1a1a; }
+  .footer-content .widget-about {
     float: left;
-    margin: 0 15px; }
+    height: 380px;
+    width: 260px;
+    margin-top: 64px; }
+    .footer-content .widget-about .list-us {
+      margin-top: 40px;
+      clear: both;
+      line-height: 25px; }
+      .footer-content .widget-about .list-us .list-us-item {
+        margin-bottom: 24px;
+        list-style: none; }
+        .footer-content .widget-about .list-us .list-us-item span {
+          display: inline-block;
+          vertical-align: top; }
+        .footer-content .widget-about .list-us .list-us-item .fa-log {
+          width: 35px;
+          padding-top: 6px;
+          color: #60BA62;
+          font-size: 22px;
+          display: inline-block; }
+    .footer-content .widget-about .panel-title {
+      color: #fff;
+      font-size: 22px;
+      border-left: 4px solid #60BA62;
+      padding-left: 10px; }
+  .footer-content .inforcus {
+    float: right;
+    height: 380px;
+    width: 680px;
+    margin-top: 64px; }
+    .footer-content .inforcus .panel-title {
+      color: #fff;
+      font-size: 22px;
+      border-left: 4px solid #60BA62;
+      padding-left: 10px; }
+    .footer-content .inforcus .list-gallary {
+      width: 100%; }
+    .footer-content .inforcus .infor {
+      padding-right: 80px; }
+    .footer-content .inforcus .list-gallary-item {
+      width: 190px;
+      height: 250px;
+      float: left;
+      margin: 0 5px; }
+      .footer-content .inforcus .list-gallary-item .list-extras {
+        margin-top: 40px;
+        padding: 0; }
+      .footer-content .inforcus .list-gallary-item .list-extras-item {
+        list-style: none;
+        padding-bottom: 5px;
+        line-height: 30px; }
+        .footer-content .inforcus .list-gallary-item .list-extras-item a {
+          position: relative;
+          font-size: 13px;
+          text-decoration: none;
+          color: #999; }
+          .footer-content .inforcus .list-gallary-item .list-extras-item a:before {
+            top: 2px;
+            left: 0;
+            content: "\f105";
+            position: absolute;
+            font-family: "fontawesome";
+            font-size: 12px;
+            line-height: normal; }
+          .footer-content .inforcus .list-gallary-item .list-extras-item a:hover {
+            padding-left: 12px;
+            color: #60BA62; }
 
-.copy .copy-left {
-  float: left;
-  width: 450px;
-  height: 90px;
-  background-color: yellow; }
-.copy .copy-right {
-  float: right; }
+.copy {
+  background-color: #2a2a2a;
+  height: 90px; }
+  .copy .copy-left {
+    float: left;
+    width: 450px;
+    margin-top: 28px; }
+    .copy .copy-left a {
+      color: #60BA62;
+      text-decoration: none; }
+      .copy .copy-left a:hover {
+        text-decoration: underline; }
+  .copy .copy-right {
+    float: right;
+    margin-top: 28px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,7 +8,7 @@ $color: (
   title: #333,
   green: #60BA62,
   green_1: #46a148,
-  green_2: 439a45,
+  green_2: #439a45,
   gray_v1: #363d43,
   gray_v2: #2b3136,
   gray_border: #E1E1E1,
@@ -17,6 +17,9 @@ $color: (
   gray_ao: #e1e1e1,
   black_mo: #162119,
   gray_amo: #f1f1f1,
+  black_2: #1a1a1a,
+  black_3: #2a2a2a,
+  black_4: #162118,
 );
 
 h1, h2, h3, h4, h5, h6 {
@@ -30,15 +33,14 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   line-height: 1.88;
-  color: #999999;
-  background-color: #ffffff;
+  color: map-get($color, gray_border_v1);
+  background-color: map-get($color, white);
   font-weight: 500;
 }
 
 .container {
   width: 1140px;
   margin: 0 auto;
-  background-color: map-get($color, white);
 }
 
 .clear {

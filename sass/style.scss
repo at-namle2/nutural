@@ -17,6 +17,7 @@
       outline: none;
       border: none;
       font-size: 12px;
+      cursor: pointer;
     }
     .name {
       color: #60BA62;
@@ -39,6 +40,7 @@
       padding-left: 20px;
       outline: none;
       color: map-get($color, white);
+      text-indent: 2%;
     }
     .button-search {
       position: absolute;
@@ -88,24 +90,86 @@
     padding: 0;
   }
   .list-item {
-    padding: 0 15px;
+    position: relative;
+    padding: 0 11px;
     display: inline-block;
     list-style: none;
     a {
       text-decoration: none;
       text-transform: uppercase;
       color: map-get($color, black);
+      &:hover {
+        color: map-get($color, green_2);
+      }
     }
   }
+  .sub-menu {
+      position: absolute;
+      display: none;
+      width: 200px;
+      height: 210px;
+      background-color: map-get($color, white);
+      padding: 5px 20px;
+      top: 26px;
+      left: 0;
+      list-style: none;
+      border: 1px solid map-get($color, gray_ao);
+      box-shadow: 0px 0px 2px -1px rgba(0,0,0,0.75);
+      .sub-menu-item {
+        border-bottom: 1px dotted map-get($color, gray_ao);
+        a {
+          color: map-get($color, black_2);
+          padding: 5px 20px;
+          text-decoration: none;
+          display: block;
+          cursor: pointer;
+          text-transform: lowercase;
+          font-size: 14px;
+          text-align: left;
+          text-transform: capitalize;
+        &:hover {
+          color: map-get($color, green_2);
+        }
+      }
+    }
+  }
+ .list-item:hover .sub-menu {
+    display: block;
+  }
 }
-
 .banner {
   background-image: url(../images/category.png);
   background-repeat: no-repeat;
-  height: 300px;
+  height: 100px;
+  .baner {
+    display: block;
+    text-align: center;
+    .list-banner {
+      margin: 0;
+      padding: 0;
+      padding-top: 38px;
+      .list-banner-item {
+        list-style: none;
+        display: inline-block;
+        margin: 0 5px;
+        .fa-home {
+          color: map-get($color, gray_border_v1);
+          &:hover {
+            color: map-get($color, green_2);
+          }
+          strong {
+            padding: 0 6px;
+            font-size: 20px;
+          }
+        }
+        a {
+          text-decoration: none;
+          color: map-get($color, green_2);
+        }
+      }
+    }
+  }
 }
-
-
 /*section*/
 .natural-food {
   float: left;
@@ -131,7 +195,40 @@
       outline: none;
       margin-right: 3px;
       margin: 25px 0;
+      cursor: pointer;
     }
+    .tooltip {
+        position: relative;
+        display: inline-block;
+
+        .tooltiptext {
+          position: absolute;
+          width: 100px;
+          height: 30px;
+          background-color: red;
+          color: map-get($color, white);
+          z-index: 1;
+          bottom: 125%;
+          left: 98%;
+          margin-left: -60px;
+          opacity: 0;
+          transition: opacity 1s;
+          &:hover {
+            visibility: visible;
+            opacity: 1;
+          }
+          &:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+          }
+        }
+      }
     .btn-list {
       padding: 7px;
       font-size: 14px;
@@ -142,6 +239,7 @@
       line-height: 0;
       outline: none;
       margin-right: 73px;
+      cursor: pointer;
     }
     .compare {
       display: block;
@@ -155,12 +253,20 @@
     }
     .sort {
       margin-right: 10px;
+      color: map-get($color, black);
+      font-size: 12px;
+    }
+    .shows {
+      color: map-get($color, black);
+      font-size: 12px;
     }
     .selected {
       height: 30px;
       width: 17%;
       background-color: map-get($color, white);
       border: 1px solid map-get($color, gray_border);
+      outline: none;
+      color: map-get($color, gray_border_v1);
     }
   }
   .refine-search {
@@ -185,20 +291,80 @@
 }
 .product-block {
   margin-top: 30px;
- .gallery {
+  height: 1370px;
+  border-bottom: 1px solid map-get($color, gray_border);
+.gallery {
     width: 100%;
     width: 1000px;
+    position: relative;
   }
 .gallery-item {
   width: 263px;
-  height: 450px;
   margin-right: 30px;
   float: left;
+  height: 465px;
+  .sale {
+    position: relative;
+    .sales {
+      color: map-get($color, white);
+      font-size: 11px;
+      position: absolute;
+      bottom: 230px;
+      background: map-get($color, green);
+      left: 10px;
+      height: 20px;
+      line-height: 20px;
+      padding: 0px 10px;
+    }
+  }
+  .content {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding-top: 0 5px;
+    .img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      width: 100%;
+      height: 0;
+      transition: .5s ease;
+      font-size: 12px;
+      .text {
+        display: inline-block;
+        overflow: hidden;
+        top: -4%;
+        left: 8px;
+        font-size: 20px;
+        padding: 4px 4px;
+        a {
+          color: map-get($color, white);
+          &:hover {
+            color: map-get($color, green_2);
+          }
+        }
+      }
+    }
+     &:hover .overlay {
+      height: 15%;
+   }
+  }
   .titile-product {
-   padding: 10px 0 10px;
+   padding: 10px 0 1px;
    a {
     text-decoration: none;
     color: map-get($color, black);
+     &:hover {
+      color: map-get($color, green_2);
+    }
    }
   }
   .price {
@@ -229,6 +395,11 @@
     background: none;
     outline: none;
     cursor: pointer;
+    margin-bottom: 30px;
+    &:hover {
+      background-color: map-get($color, green_2);
+      color: map-get($color, white);
+    }
   }
   .fa-add {
     padding: 0 7px;
@@ -239,12 +410,16 @@
   }
  }
 }
-
+.text-showing {
+  text-align: right;
+  margin-top: 30px;
+}
 }
 .category-food {
   float: right;
   width: 264px;
   margin-top: 30px;
+  margin-right: -10px;
   .pending{
     width: 263px;
     height: 70px;
@@ -266,15 +441,14 @@
     padding: 13px 20px;
     border: 1px solid map-get($color, gray_ao);
     margin-right: -1px;
+    cursor: pointer;
     &:hover {
         background: map-get($color, gray_amo);
+        color: map-get($color, gray_ao);
      }
     a {
       text-decoration: none;
-      color: map-get($color, black_mo);  
-      &:hover {
-        color: map-get($color, gray_ao);
-      }
+      color: map-get($color, black_mo);
     }
   }
    .pend {
@@ -307,7 +481,7 @@
     }
   .price {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: none;
     color: map-get($color, black);
     }
@@ -327,7 +501,7 @@
       color: map-get($color, white);
       border-color: map-get($color, green_2);
      }
-   } 
+   }
   }
   .special {
     margin-top: 30px;
@@ -360,59 +534,193 @@
       margin: 6px 0 13px;
       a {
         text-decoration: none;
+        color: map-get($color, black_4);
+        &:hover {
+          color: map-get($color, green_2);
+        }
       }
       img {
         width: 84px;
         height: 84px;
       }
       .price-ness {
-          color: map-get($color, green);
+        color: map-get($color, green_2);
+        font-size: 16px;
+      }
+      .price-olds {
+        font-size: 12px;
+        text-decoration: underline;
       }
       .fa-star {
         color: map-get($color, star);
       }
     }
   }
+}
 
-}
-.newletter {
-  width: 100%;
-  background-color: red;
+/* full-newletter*/
+.full-newletter {
+  background-image: url(../images/newletter.png);
+  background-repeat: no-repeat;
   height: 300px;
-  margin-top: 150px;
+  .newletter {
+    width: 100%;
+    height: 300px;
+    margin-top: 60px;
+    display: block;
+    text-align: center;
+    .title-newletter {
+      color: map-get($color, white);
+      font-size: 30px;
+      margin: 0;
+      padding-top: 60px;
+      line-height: 1.5;
+    }
+    .text-newletter {
+      color: map-get($color, white);
+      margin-top: 26px;
+      margin-bottom: 24px;
+    }
+  }
+  .contact-email {
+    position: relative;
+    .input-email {
+      position: absolute;
+      height: 46px;
+      width: 32%;
+      left: 315px;
+      border:none;
+      outline: none;
+      text-indent: 5%;
+      color: map-get($color, gray_border_v1);
+    }
+    .button-subscribe {
+      position: absolute;
+      height: 46px;
+      width: 13%;
+      right: 312px;
+      border: none;
+      outline: none;
+      background: map-get($color, green_2);
+      text-transform: uppercase;
+      color: map-get($color, white);
+      cursor: pointer;
+      font-size: 14px;
+      &:hover {
+        background-color: map-get($color, green_1);
+      }
+    }
+  }
 }
+
 
 /*footer*/
-
-.widget-about {
-  float: left;
-  height: 380px;
-  width: 260px;
-}
-
-.inforcus {
-  float: right;
-  height: 380px;
-  width: 680px;
-  .list-gallary {
-    width: 100%;
-  }
-  .list-gallary-item {
-    width: 190px;
-    height: 250px;
+.footer-content {
+  background-color: map-get($color, black_2);
+  .widget-about {
     float: left;
-    margin: 0 15px;
+    height: 380px;
+    width: 260px;
+    margin-top: 64px;
+    .list-us {
+      margin-top: 40px;
+      clear: both;
+      line-height: 25px;
+      .list-us-item {
+        margin-bottom: 24px;
+        list-style: none;
+        span {
+          display: inline-block;
+          vertical-align: top;
+        }
+        .fa-log {
+          width: 35px;
+          padding-top: 6px;
+          color: map-get($color, green);
+          font-size: 22px;
+          display: inline-block;
+        }
+      }
+    }
+    .panel-title {
+      color: map-get($color, white);
+      font-size: 22px;
+      border-left: 4px solid map-get($color, green);
+      padding-left: 10px;
+    }
+  }
+
+  .inforcus {
+    float: right;
+    height: 380px;
+    width: 680px;
+    margin-top: 64px;
+    .panel-title {
+      color: map-get($color, white);
+      font-size: 22px;
+      border-left: 4px solid map-get($color, green);
+      padding-left: 10px;
+    }
+    .list-gallary {
+      width: 100%;
+    }
+    .infor {
+        padding-right: 80px;
+      }
+    .list-gallary-item {
+      width: 190px;
+      height: 250px;
+      float: left;
+      margin: 0 5px;
+
+      .list-extras {
+        margin-top: 40px;
+        padding: 0;
+      }
+      .list-extras-item {
+        list-style: none;
+        padding-bottom: 5px;
+        line-height: 30px;
+        a {
+          position: relative;
+          font-size: 13px;
+          text-decoration: none;
+          color: map-get($color, gray_border_v1);
+          &:before {
+            top: 2px;
+            left: 0;
+            content: "\f105";
+            position: absolute;
+            font-family: "fontawesome";
+            font-size: 12px;
+            line-height: normal;
+          }
+          &:hover {
+            padding-left: 12px;
+            color: map-get($color, green);
+          }
+        }
+      }
+    }
   }
 }
-
 .copy {
- .copy-left {
+  background-color: map-get($color, black_3);
+  height: 90px;
+  .copy-left {
     float: left;
     width: 450px;
-    height: 90px;
-    background-color: yellow;
- }
- .copy-right {
+    margin-top: 28px;
+    a {
+      color: map-get($color, green);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .copy-right {
     float: right;
- }
+     margin-top: 28px;
+  }
 }
