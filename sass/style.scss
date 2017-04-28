@@ -103,6 +103,37 @@
       }
     }
   }
+  .sub-menu-page {
+    visibility: hidden;
+      position: absolute;
+      width: 1140px;
+      height: 390px;
+      background-color: #fff;
+      padding: 5px 20px;
+      top: 26px;
+      right: -390px;
+      list-style: none;
+      border: 1px solid #e1e1e1;
+      box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.75);
+      .sub-menu-item {
+        border-bottom: 1px dotted map-get($color, gray_ao);
+        a {
+          color: map-get($color, black_2);
+          padding: 5px 20px;
+          text-decoration: none;
+          display: block;
+          cursor: pointer;
+          text-transform: lowercase;
+          font-size: 14px;
+          text-align: left;
+          text-transform: capitalize;
+        &:hover {
+          color: map-get($color, green_2);
+        }
+      }
+    }
+  }
+
   .sub-menu {
       position: absolute;
       display: none;
@@ -133,8 +164,13 @@
       }
     }
   }
+
  .list-item:hover .sub-menu {
     display: block;
+  }
+  .list-item:hover .sub-menu-page {
+    display: block;
+    visibility: visible;
   }
 }
 .banner {
@@ -189,30 +225,34 @@
       font-size: 14px;
       vertical-align: middle;
       border: 1px solid map-get($color, gray_border);
-      background-color: map-get($color, green);
-      color: map-get($color, white);
+      color: map-get($color, gray_border_v1);
+      background-color: map-get($color, white);
       line-height: 0;
       outline: none;
       margin-right: 3px;
       margin: 25px 0;
       cursor: pointer;
+      &:hover {
+        background-color: map-get($color, green);
+      }
     }
     .tooltip {
         position: relative;
         display: inline-block;
-
         .tooltiptext {
+          width: 48px;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          padding: 18px 0;
           position: absolute;
-          width: 100px;
-          height: 30px;
-          background-color: red;
-          color: map-get($color, white);
           z-index: 1;
           bottom: 125%;
-          left: 98%;
+          left: 184%;
           margin-left: -60px;
           opacity: 0;
           transition: opacity 1s;
+          text-transform: capitalize;
           &:hover {
             visibility: visible;
             opacity: 1;
@@ -234,8 +274,8 @@
       font-size: 14px;
       vertical-align: middle;
       border: 1px solid map-get($color, gray_border);
-      background-color: map-get($color, white);
-      color: map-get($color, gray_border_v1);
+      color: map-get($color, white);
+      background-color: map-get($color, green);
       line-height: 0;
       outline: none;
       margin-right: 73px;
@@ -287,6 +327,9 @@
     text-decoration: none;
     color: map-get($color, black);
     font-weight: 600;
+    &:hover {
+      color: map-get($color, green);
+    }
   }
 }
 .product-block {
@@ -345,6 +388,7 @@
         left: 8px;
         font-size: 20px;
         padding: 4px 4px;
+        }
         a {
           color: map-get($color, white);
           &:hover {
@@ -352,7 +396,6 @@
           }
         }
       }
-    }
      &:hover .overlay {
       height: 15%;
    }

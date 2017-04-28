@@ -114,6 +114,32 @@ body {
       color: #000; }
       .nav-list .list-item a:hover {
         color: #439a45; }
+  .nav-list .sub-menu-page {
+    visibility: hidden;
+    position: absolute;
+    width: 1140px;
+    height: 390px;
+    background-color: #fff;
+    padding: 5px 20px;
+    top: 26px;
+    right: -390px;
+    list-style: none;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.75); }
+    .nav-list .sub-menu-page .sub-menu-item {
+      border-bottom: 1px dotted #e1e1e1; }
+      .nav-list .sub-menu-page .sub-menu-item a {
+        color: #1a1a1a;
+        padding: 5px 20px;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        text-transform: lowercase;
+        font-size: 14px;
+        text-align: left;
+        text-transform: capitalize; }
+        .nav-list .sub-menu-page .sub-menu-item a:hover {
+          color: #439a45; }
   .nav-list .sub-menu {
     position: absolute;
     display: none;
@@ -142,6 +168,9 @@ body {
           color: #439a45; }
   .nav-list .list-item:hover .sub-menu {
     display: block; }
+  .nav-list .list-item:hover .sub-menu-page {
+    display: block;
+    visibility: visible; }
 
 .banner {
   background-image: url(../images/category.png);
@@ -187,28 +216,32 @@ body {
       font-size: 14px;
       vertical-align: middle;
       border: 1px solid #E1E1E1;
-      background-color: #60BA62;
-      color: #fff;
+      color: #999;
+      background-color: #fff;
       line-height: 0;
       outline: none;
       margin-right: 3px;
       margin: 25px 0;
       cursor: pointer; }
+      .natural-food .sort-by .btn-large:hover {
+        background-color: #60BA62; }
     .natural-food .sort-by .tooltip {
       position: relative;
       display: inline-block; }
       .natural-food .sort-by .tooltip .tooltiptext {
-        position: absolute;
-        width: 100px;
-        height: 30px;
-        background-color: red;
+        width: 48px;
+        background-color: #555;
         color: #fff;
+        text-align: center;
+        padding: 18px 0;
+        position: absolute;
         z-index: 1;
         bottom: 125%;
-        left: 98%;
+        left: 184%;
         margin-left: -60px;
         opacity: 0;
-        transition: opacity 1s; }
+        transition: opacity 1s;
+        text-transform: capitalize; }
         .natural-food .sort-by .tooltip .tooltiptext:hover {
           visibility: visible;
           opacity: 1; }
@@ -226,8 +259,8 @@ body {
       font-size: 14px;
       vertical-align: middle;
       border: 1px solid #E1E1E1;
-      background-color: #fff;
-      color: #999;
+      color: #fff;
+      background-color: #60BA62;
       line-height: 0;
       outline: none;
       margin-right: 73px;
@@ -269,6 +302,8 @@ body {
       text-decoration: none;
       color: #000;
       font-weight: 600; }
+      .natural-food .refine-search .dress-list-item a:hover {
+        color: #60BA62; }
   .natural-food .product-block {
     margin-top: 30px;
     height: 1370px;
@@ -321,10 +356,10 @@ body {
             left: 8px;
             font-size: 20px;
             padding: 4px 4px; }
-            .natural-food .product-block .gallery-item .content .overlay .text a {
-              color: #fff; }
-              .natural-food .product-block .gallery-item .content .overlay .text a:hover {
-                color: #439a45; }
+          .natural-food .product-block .gallery-item .content .overlay a {
+            color: #fff; }
+            .natural-food .product-block .gallery-item .content .overlay a:hover {
+              color: #439a45; }
         .natural-food .product-block .gallery-item .content:hover .overlay {
           height: 15%; }
       .natural-food .product-block .gallery-item .titile-product {
