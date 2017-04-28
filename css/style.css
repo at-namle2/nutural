@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #333; }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins';
   font-size: 14px;
   line-height: 1.88;
   color: #999;
@@ -26,6 +26,9 @@ body {
 @font-face {
   font-family: 'LeckerliOne';
   src: url("../font/LeckerliOne.otf"); }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../font/jo4.woff2"); }
 .head_v1 {
   background-color: #363d43; }
   .head_v1 .language {
@@ -103,42 +106,100 @@ body {
   .nav-list .list {
     margin-top: 30px;
     padding: 0; }
-  .nav-list .list-item {
-    position: relative;
-    padding: 0 11px;
-    display: inline-block;
-    list-style: none; }
-    .nav-list .list-item a {
-      text-decoration: none;
-      text-transform: uppercase;
-      color: #000; }
-      .nav-list .list-item a:hover {
-        color: #439a45; }
-  .nav-list .sub-menu-page {
-    visibility: hidden;
-    position: absolute;
-    width: 1140px;
-    height: 390px;
-    background-color: #fff;
-    padding: 5px 20px;
-    top: 26px;
-    right: -390px;
-    list-style: none;
-    border: 1px solid #e1e1e1;
-    box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.75); }
-    .nav-list .sub-menu-page .sub-menu-item {
-      border-bottom: 1px dotted #e1e1e1; }
-      .nav-list .sub-menu-page .sub-menu-item a {
-        color: #1a1a1a;
+    .nav-list .list .list-item {
+      position: relative;
+      padding: 0 11px;
+      display: inline-block;
+      list-style: none; }
+      .nav-list .list .list-item .sub-menu-page {
+        visibility: hidden;
+        position: absolute;
+        width: 1140px;
+        height: 460px;
+        background-color: #fff;
         padding: 5px 20px;
+        top: 26px;
+        right: -390px;
+        list-style: none;
+        border: 1px solid #e1e1e1;
+        box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.75);
+        box-sizing: border-box; }
+        .nav-list .list .list-item .sub-menu-page .sub-left {
+          float: left;
+          height: 350px; }
+          .nav-list .list .list-item .sub-menu-page .sub-left .gallary-special {
+            width: 100%;
+            padding: 15px 25px; }
+          .nav-list .list .list-item .sub-menu-page .sub-left .gallary-special-item {
+            width: 110px;
+            height: 100px;
+            float: left;
+            margin-right: 10px;
+            margin: 6px 0 13px; }
+            .nav-list .list .list-item .sub-menu-page .sub-left .gallary-special-item a {
+              text-decoration: none;
+              color: #162118; }
+              .nav-list .list .list-item .sub-menu-page .sub-left .gallary-special-item a:hover {
+                color: #439a45; }
+            .nav-list .list .list-item .sub-menu-page .sub-left .gallary-special-item img {
+              width: 84px;
+              height: 84px; }
+            .nav-list .list .list-item .sub-menu-page .sub-left .gallary-special-item .price-ness {
+              color: #439a45;
+              font-size: 16px; }
+            .nav-list .list .list-item .sub-menu-page .sub-left .gallary-special-item .price-olds {
+              font-size: 12px;
+              text-decoration: underline; }
+            .nav-list .list .list-item .sub-menu-page .sub-left .gallary-special-item .fa-star {
+              color: #febd49; }
+        .nav-list .list .list-item .sub-menu-page .sub-right {
+          float: right;
+          width: 750px;
+          height: 350px; }
+          .nav-list .list .list-item .sub-menu-page .sub-right .sublime {
+            width: 100%;
+            padding: 15px 25px; }
+            .nav-list .list .list-item .sub-menu-page .sub-right .sublime .sublime-item {
+              width: 210px;
+              height: 100px;
+              float: left;
+              margin-right: 10px;
+              margin: 6px 0 13px; }
+              .nav-list .list .list-item .sub-menu-page .sub-right .sublime .sublime-item .open {
+                margin-bottom: 35px;
+                font-weight: 500;
+                color: #000; }
+              .nav-list .list .list-item .sub-menu-page .sub-right .sublime .sublime-item .menu {
+                width: 170px; }
+                .nav-list .list .list-item .sub-menu-page .sub-right .sublime .sublime-item .menu .menu-item {
+                  list-style: none;
+                  border-bottom: 1px dotted #E1E1E1;
+                  padding: 5px 0 10px; }
+                  .nav-list .list .list-item .sub-menu-page .sub-right .sublime .sublime-item .menu .menu-item a {
+                    text-transform: lowercase;
+                    text-transform: capitalize;
+                    color: #000;
+                    line-height: 1.5;
+                    font-weight: 500; }
+        .nav-list .list .list-item .sub-menu-page .sub-menu-item {
+          border-bottom: 1px dotted #e1e1e1; }
+          .nav-list .list .list-item .sub-menu-page .sub-menu-item a {
+            color: #1a1a1a;
+            padding: 5px 20px;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            text-transform: lowercase;
+            font-size: 14px;
+            text-align: left;
+            text-transform: capitalize; }
+            .nav-list .list .list-item .sub-menu-page .sub-menu-item a:hover {
+              color: #439a45; }
+      .nav-list .list .list-item a {
         text-decoration: none;
-        display: block;
-        cursor: pointer;
-        text-transform: lowercase;
-        font-size: 14px;
-        text-align: left;
-        text-transform: capitalize; }
-        .nav-list .sub-menu-page .sub-menu-item a:hover {
+        text-transform: uppercase;
+        color: #000; }
+        .nav-list .list .list-item a:hover {
           color: #439a45; }
   .nav-list .sub-menu {
     position: absolute;
@@ -172,6 +233,7 @@ body {
     display: block;
     visibility: visible; }
 
+/*banner*/
 .banner {
   background-image: url(../images/category.png);
   background-repeat: no-repeat;
@@ -202,7 +264,8 @@ body {
 .natural-food {
   float: left;
   width: 850px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  /*product*/ }
   .natural-food .title-breakfas {
     margin-bottom: 13px;
     font-size: 30px; }
@@ -404,6 +467,7 @@ body {
     text-align: right;
     margin-top: 30px; }
 
+/*category-food*/
 .category-food {
   float: right;
   width: 264px;
