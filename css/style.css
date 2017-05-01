@@ -124,6 +124,10 @@ body {
         border: 1px solid #e1e1e1;
         box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.75);
         box-sizing: border-box; }
+        .nav-list .list .list-item .sub-menu-page .product {
+          margin: 11px 0 35px;
+          font-weight: 500;
+          color: #000; }
         .nav-list .list .list-item .sub-menu-page .sub-left {
           float: left;
           height: 350px; }
@@ -171,9 +175,11 @@ body {
                 color: #000; }
               .nav-list .list .list-item .sub-menu-page .sub-right .sublime .sublime-item .menu {
                 width: 170px; }
+                .nav-list .list .list-item .sub-menu-page .sub-right .sublime .sublime-item .menu .ipsum {
+                  width: 302px; }
                 .nav-list .list .list-item .sub-menu-page .sub-right .sublime .sublime-item .menu .menu-item {
                   list-style: none;
-                  border-bottom: 1px dotted #E1E1E1;
+                  border-bottom: 1px dotted #e1e1e1;
                   padding: 5px 0 10px; }
                   .nav-list .list .list-item .sub-menu-page .sub-right .sublime .sublime-item .menu .menu-item a {
                     text-transform: lowercase;
@@ -272,13 +278,13 @@ body {
   .natural-food .sort-by {
     height: 80px;
     text-transform: uppercase;
-    border-top: 1px solid #E1E1E1;
-    border-bottom: 1px solid #E1E1E1; }
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1; }
     .natural-food .sort-by .btn-large {
       padding: 7px;
       font-size: 14px;
       vertical-align: middle;
-      border: 1px solid #E1E1E1;
+      border: 1px solid #e1e1e1;
       color: #999;
       background-color: #fff;
       line-height: 0;
@@ -321,7 +327,7 @@ body {
       padding: 7px;
       font-size: 14px;
       vertical-align: middle;
-      border: 1px solid #E1E1E1;
+      border: 1px solid #e1e1e1;
       color: #fff;
       background-color: #60BA62;
       line-height: 0;
@@ -347,9 +353,9 @@ body {
       height: 30px;
       width: 17%;
       background-color: #fff;
-      border: 1px solid #E1E1E1;
-      outline: none;
-      color: #999; }
+      border: 1px solid #e1e1e1;
+      color: #999;
+      outline: none; }
   .natural-food .refine-search {
     margin: 60px 0 30px; }
     .natural-food .refine-search .title-refine {
@@ -370,7 +376,7 @@ body {
   .natural-food .product-block {
     margin-top: 30px;
     height: 1370px;
-    border-bottom: 1px solid #E1E1E1; }
+    border-bottom: 1px solid #e1e1e1; }
     .natural-food .product-block .gallery {
       width: 100%;
       width: 1000px;
@@ -501,9 +507,7 @@ body {
   .category-food .pend {
     width: 263px;
     height: 70px;
-    border-left: 1px solid #e1e1e1;
-    border-right: 1px solid #e1e1e1;
-    border-bottom: 1px solid #e1e1e1; }
+    border: 1px solid #e1e1e1; }
     .category-food .pend .title-searching {
       border-top: 3px solid #e1e1e1;
       padding: 25px 20px;
@@ -546,9 +550,7 @@ body {
     .category-food .special .pendy {
       width: 263px;
       height: 70px;
-      border-left: 1px solid #e1e1e1;
-      border-right: 1px solid #e1e1e1;
-      border-bottom: 1px solid #e1e1e1; }
+      border: 1px solid #e1e1e1; }
       .category-food .special .pendy .title-special {
         border-top: 3px solid #e1e1e1;
         padding: 25px 20px;
@@ -623,8 +625,8 @@ body {
       border: none;
       outline: none;
       background: #439a45;
-      text-transform: uppercase;
       color: #fff;
+      text-transform: uppercase;
       cursor: pointer;
       font-size: 14px; }
       .full-newletter .contact-email .button-subscribe:hover {
@@ -689,18 +691,19 @@ body {
           position: relative;
           font-size: 13px;
           text-decoration: none;
-          color: #999; }
-          .footer-content .inforcus .list-gallary-item .list-extras-item a:before {
-            top: 2px;
-            left: 0;
-            content: "\f105";
-            position: absolute;
-            font-family: "fontawesome";
-            font-size: 12px;
-            line-height: normal; }
+          color: #999;
+          transition: all 0.35s ease; }
           .footer-content .inforcus .list-gallary-item .list-extras-item a:hover {
             padding-left: 12px;
             color: #60BA62; }
+            .footer-content .inforcus .list-gallary-item .list-extras-item a:hover:before {
+              top: 2px;
+              left: 0;
+              content: "\f105";
+              position: absolute;
+              font-size: 12px;
+              line-height: normal;
+              font-family: "fontawesome"; }
 
 .copy {
   background-color: #2a2a2a;
