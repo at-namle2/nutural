@@ -1,83 +1,161 @@
-
-<button type="button" class="add-to-cart" data-name="Asus" data-price="5000">add-to-cart</button>
-<table id="show-cart">
-  <tr>
-    <th>Name product: </th>
-    <th>Price: </th>
-    <th>Quantity: </th>
-    <th id="total-cart">Total</th>
-  </tr>
-</table>
-<script type="text/javascript">
-
-// shopping card function
-var cart = [];
-
-var Item = function(name, price, quantity) {
-  this.name = name;
-  this.price = price;
-  this.quantity = quantity;
-}
-
-function displayCart() {
-  var cartArray = listCart();
-  var output = "";
-  for(var i in cartArray) {
-      output += "<tr><th>Name</th><th>Price</th><th>count</th><th>total</th><tr>";
-      output += "<tr>";
-      output += "<td>"+ cartArray[i].name + "</td>";
-      output += "<td>"+ cartArray[i].price + "</td>";
-      output += "<td>"+ cartArray[i].quantity + "</td>";
-      output += "<td>"+ cart[i].price * cart[i].quantity;+ "</td>";
-      output += "</tr>";
-  }
-  $("#show-cart").html(output);
-}
-
-// function add to card
-function AddItemCard(name, price, quantity) {
-  for(var i in cart) {
-    if(cart[i].name === name) {
-       cart[i].quatity ++;
-       saveCart();
-       return;
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+  <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+  <style type="text/css" media="screen">
+    .menu {
+      line-height: normal;
+      background: #FFF;
+      border: 1px solid #E1E1E1;
+      border-top: 2px solid #60BA62;
+      margin: 0;
+      min-width: 185px;
     }
-  }
-  var item = new Item(name, price, quantity);
-    cart.push(item);
-    saveCart();
-}
-//list cart
-function listCart() {
-  var cartCopy = [];
-  for( var i in cart) {
-    var item = cart[i];
-    var itemcopy = {};
-    for( var p in item) {
-      itemcopy[p] = item[p];
+    .dropdow-menu {
+      width: 400px;
+      margin-top: 0;
+      padding: 20px;
+      z-index: 1002px;
     }
-    cartCopy.push(itemcopy);
+    .table-cart {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .image {
+      float: left;
+      margin-right: 20px;
+    }
+    .btn {
+      padding: 0;
+      color: #fff;
+    }
+    .btn-xs {
+      padding: 7px 5px;
+      border-radius: 0;
+      line-height: 1.5px;
+      font-size: 12px;
+    }
+    .fas {
+      width: 20%;
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      color: red;
+    }
+    .fas:before {
+      content: "\f00d";
+      margin-left: -5px;
+    }
+    .remove {
+      position: absolute;
+      right: 0;
+      top: 0;
+      text-align: center;
+      width: 20px;
+      height: 20px;
+      background: green;
+      line-height: 20px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <button type="button" class="add-to-cart" data-name="Asus" data-price="5000">add-to-cart</button>
+  <ul class="list dropdow-menu menu">
+    <li>
+      <div class="table-cart">
+        <div class="image">
+          <a href=""><img src="images/cart.jpg" alt=""></a>
+        </div>
+        <div class="infor-header-cart" id="show-cart">
+          <div class="name">Name product:</div>
+          <div class="price">Price:</div>
+          <div class="quantity">Quantity:</div>
+          <div class="total">Total:</div>
+          <div class="remove">
+            <button type="button" class="btn btn-xs"><i class="fas fa-times"></i></button>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <script type="text/javascript">
+
+  // shopping card function
+  var cart = [];
+
+  var Item = function(name, price, quantity) {
+    this.name = name;
+    this.price = price;
+    this.quantity = quantity;
   }
-  return cartCopy;
-}
 
-//countCart
-function countCart() {
-  var totalCount = 0;
-  for( var i in cart) {
-    totalCount +=  cart[i].count;
+  function displayCart() {
+    var cartArray = listCart();
+    var output = "";
+    for(var i in cartArray) {
+        output += "<tr><th>Name</th><th>Price</th><th>count</th><th>total</th><tr>";
+        output += "<tr>";
+        output += "<td>"+ cartArray[i].name + "</td>";
+        output += "<td>"+ cartArray[i].price + "</td>";
+        output += "<td>"+ cartArray[i].quantity + "</td>";
+        output += "<td>"+ cart[i].price * cart[i].quantity;+ "</td>";
+        output += "</tr>";
+    }
+    $("#show-cart").html(output);
   }
-  return totalCount;
-}
 
-//save cart
-function saveCart() {
-  localStorage.setItem("shoppingCart", JSON.stringify(cart));
-}
+  // function add to card
+  function AddItemCard(name, price, quantity) {
+    for(var i in cart) {
+      if(cart[i].name === name) {
+         cart[i].quatity ++;
+         saveCart();
+         return;
+      }
+    }
+    var item = new Item(name, price, quantity);
+      cart.push(item);
+      saveCart();
+  }
+  //list cart
+  function listCart() {
+    var cartCopy = [];
+    for( var i in cart) {
+      var item = cart[i];
+      var itemcopy = {};
+      for( var p in item) {
+        itemcopy[p] = item[p];
+      }
+      cartCopy.push(itemcopy);
+    }
+    return cartCopy;
+  }
 
-// function load cart
-function loadCart() {
-  cart = JSON.parse(localStorage.setItem("shoppingCart"));
-}
+  //countCart
+  function countCart() {
+    var totalCount = 0;
+    for( var i in cart) {
+      totalCount +=  cart[i].count;
+    }
+    return totalCount;
+  }
 
-</script>
+  //save cart
+  function saveCart() {
+    localStorage.setItem("shoppingCart", JSON.stringify(cart));
+  }
+
+  // function load cart
+  function loadCart() {
+    cart = JSON.parse(localStorage.setItem("shoppingCart"));
+  }
+
+  </script>
+</body>
+</html>

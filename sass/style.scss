@@ -1,5 +1,4 @@
 @import "global";
-@import "up";
 
 .head_v1 {
   background-color: map-get($color, gray_v1);
@@ -16,9 +15,10 @@
       border: none;
       font-size: 12px;
       cursor: pointer;
+      outline: none;
     }
     .name {
-      color: #60BA62;
+      color: map-get($color, green);
       font-weight: 700;
     }
   }
@@ -28,19 +28,22 @@
     float: right;
     background-color: map-get($color, gray_v1);
     position: relative;
-    .input-search {
+    .seach-box {
+      float: left;
+      .input-search {
       border: none;
       height: 48px;
       line-height: 45px;
       transition: all 0.35s ease 0s;
       background-color: map-get($color, gray_v2);
+      color: map-get($color, white);
       width: 280px;
       padding-left: 20px;
       outline: none;
-      color: map-get($color, white);
     }
     .button-search {
       position: absolute;
+      top: 0;
       width: 49px;
       height: 48px;
       left: 250px;
@@ -50,22 +53,25 @@
       color: map-get($color, white);
       font-size: 14px;
       cursor: pointer;
+     }
     }
-    .btn-card {
-      position: absolute;
-      width: 134px;
-      height: 48px;
-      left: 311px;
-      outline: none;
-      border: none;
-      color: map-get($color, white);
-      background-color: map-get($color, gray_v1);
-      font-size: 14px;
-      cursor: pointer;
-    }
-    .fa-card {
-      font-size: 16px;
-      color: map-get($color, green);
+    .cart {
+      .btn-card {
+        position: absolute;
+        width: 134px;
+        height: 48px;
+        float: left;
+        outline: none;
+        border: none;
+        color: map-get($color, white);
+        background-color: map-get($color, gray_v1);
+        font-size: 14px;
+        cursor: pointer;
+      }
+      .fa-card {
+        font-size: 16px;
+        color: map-get($color, green);
+      }
     }
   }
 }
@@ -81,123 +87,124 @@
   height: 90px;
   float: right;
   line-height: 90px;
-    .list-item {
-      position: relative;
-      padding: 0 11px;
-      display: inline-block;
-      list-style: none;
-    .sub-menu-page {
-      visibility: hidden;
-      position: absolute;
-      width: 1140px;
-      height: 460px;
-      background-color: map-get($color, white);
-      padding: 5px 20px;
-      top: 90px;
-      right: -390px;
-      list-style: none;
-      border: 1px solid map-get($color, gray_ao);
-      box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.75);
-      box-sizing: border-box;
-      .product {
-        margin: 11px 0 35px;
-        font-weight: 500;
-        color: map-get($color, black);
-        }
-      .sub-left {
+  .list-item {
+    position: relative;
+    padding: 0 11px;
+    display: inline-block;
+    list-style: none;
+  .sub-menu-page {
+    visibility: hidden;
+    position: absolute;
+    width: 1140px;
+    height: 460px;
+    background-color: map-get($color, white);
+    padding: 5px 20px;
+    top: 90px;
+    right: -390px;
+    list-style: none;
+    border: 1px solid map-get($color, gray_ao);
+    box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.75);
+    box-sizing: border-box;
+    line-height: 1.5;
+    .product {
+      margin: 11px 0 35px;
+      font-weight: 500;
+      color: map-get($color, black);
+      }
+    .sub-left {
+      float: left;
+      height: 350px;
+      .gallary-special {
+        width: 100%;
+        padding: 15px 25px
+       }
+      .gallary-special-item {
+        width: 110px;
+        height: 100px;
         float: left;
-        height: 350px;
-        .gallary-special {
-          width: 100%;
-          padding: 15px 25px
-         }
-        .gallary-special-item {
-          width: 110px;
+        margin-right: 10px;
+        margin: 6px 0 13px;
+        a {
+          text-decoration: none;
+          color: map-get($color, black_4);
+          &:hover {
+            color: map-get($color, green_2);
+          }
+        }
+        img {
+          width: 84px;
+          height: 84px;
+        }
+        .price-ness {
+          color: map-get($color, green_2);
+          font-size: 16px;
+        }
+        .price-olds {
+          font-size: 12px;
+          text-decoration: underline;
+        }
+        .fa-star {
+          color: map-get($color, star);
+        }
+      }
+    }
+    .sub-right {
+      float: right;
+      width: 750px;
+      height: 350px;
+      .sublime {
+        width: 100%;
+        padding: 15px 25px;
+        .sublime-item {
+          width: 210px;
           height: 100px;
           float: left;
           margin-right: 10px;
           margin: 6px 0 13px;
-          a {
-            text-decoration: none;
-            color: map-get($color, black_4);
-            &:hover {
-              color: map-get($color, green_2);
+          .open {
+            margin-bottom: 35px;
+            font-weight: 500;
+            color: map-get($color, black);
+          }
+          .menu {
+            width: 170px;
+            .ipsum {
+              width: 302px;
             }
-          }
-          img {
-            width: 84px;
-            height: 84px;
-          }
-          .price-ness {
-            color: map-get($color, green_2);
-            font-size: 16px;
-          }
-          .price-olds {
-            font-size: 12px;
-            text-decoration: underline;
-          }
-          .fa-star {
-            color: map-get($color, star);
-          }
-        }
-      }
-      .sub-right {
-        float: right;
-        width: 750px;
-        height: 350px;
-        .sublime {
-          width: 100%;
-          padding: 15px 25px;
-          .sublime-item {
-            width: 210px;
-            height: 100px;
-            float: left;
-            margin-right: 10px;
-            margin: 6px 0 13px;
-            .open {
-              margin-bottom: 35px;
-              font-weight: 500;
-              color: map-get($color, black);
-            }
-            .menu {
-              width: 170px;
-              .ipsum {
-                width: 302px;
-              }
-              .menu-item {
-                list-style: none;
-                border-bottom: 1px dotted map-get($color, gray_ao);
-                padding: 5px 0 10px;
-                a {
-                  text-transform: lowercase;
-                  text-transform: capitalize;
-                  color: map-get($color, black);
-                  line-height: 1.5;
-                  font-weight: 500;
-                }
+            .menu-item {
+              list-style: none;
+              border-bottom: 1px dotted map-get($color, gray_ao);
+              padding: 5px 0 10px;
+              a {
+                text-transform: lowercase;
+                text-transform: capitalize;
+                color: map-get($color, black);
+                line-height: 1.5;
+                font-weight: 500;
               }
             }
           }
         }
-      }
-      .sub-menu-item {
-        border-bottom: 1px dotted map-get($color, gray_ao);
-        a {
-          color: map-get($color, black_2);
-          padding: 5px 20px;
-          text-decoration: none;
-          display: block;
-          cursor: pointer;
-          text-transform: lowercase;
-          font-size: 14px;
-          text-align: left;
-          text-transform: capitalize;
-          &:hover {
-          color: map-get($color, green_2);
-        }
-       }
       }
     }
+    .sub-menu-item {
+      border-bottom: 1px dotted map-get($color, gray_ao);
+      a {
+        color: map-get($color, black_2);
+        padding: 5px 20px;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        text-transform: lowercase;
+        font-size: 14px;
+        text-align: left;
+        text-transform: capitalize;
+        &:hover {
+        color: map-get($color, green_2);
+      }
+     }
+    }
+  }
   a {
     text-decoration: none;
     text-transform: uppercase;
@@ -214,11 +221,12 @@
     height: 210px;
     background-color: map-get($color, white);
     padding: 5px 20px;
-    top: 26px;
+    top: 90px;
     left: 0;
     list-style: none;
     border: 1px solid map-get($color, gray_ao);
     box-shadow: 0px 0px 2px -1px rgba(0,0,0,0.75);
+    line-height: 1.5;
     .sub-menu-item {
       border-bottom: 1px dotted map-get($color, gray_ao);
     a {
@@ -238,7 +246,7 @@
     }
   }
 
- .list-item:hover .sub-menu {
+  .list-item:hover .sub-menu {
     display: block;
   }
   .list-item:hover .sub-menu-page {
@@ -248,7 +256,7 @@
 }
 /*banner*/
 .banner {
-  background-image: url(../images/category.png);
+  background: no-repeat url(../images/category.png);
   height: 100px;
   background-size: cover;
   .baner {
@@ -349,10 +357,10 @@
       border: 1px solid map-get($color, gray_ao);
       color: map-get($color, white);
       background-color: map-get($color, green);
-      line-height: 0;
       outline: none;
       margin-right: 73px;
       cursor: pointer;
+      line-height: 0;
     }
     .compare {
       display: inline-block;
@@ -395,7 +403,6 @@
     display: inline-block;
     list-style: none;
     width: 49%;
-
   }
   .dress-list-item a {
     text-decoration: none;
@@ -407,14 +414,19 @@
   }
 }
 /*product*/
+.text-showing {
+  text-align: right;
+  padding: 20px 0;
+  border-top: 1px solid map-get($color, gray_ao);
+}
 .product-block {
   margin-top: 30px;
-  height: 1370px;
-  border-bottom: 1px solid map-get($color, gray_ao);
+  display: inline-block;
 .gallery {
-    width: 100%;
-  }
-.gallery-item:nth-child(3) {
+ width: 100%;
+.gallery-item:nth-child(3),
+.gallery-item:nth-child(6),
+.gallery-item:nth-child(9)  {
   margin-right: 0;
   width: 263px;
   float: left;
@@ -524,9 +536,14 @@
   img {
     width: 100%;
   }
+ }
 }
 .gallery-item:nth-child(1),
- .gallery-item:nth-child(2) {
+.gallery-item:nth-child(2),
+.gallery-item:nth-child(4),
+.gallery-item:nth-child(5),
+.gallery-item:nth-child(7),
+.gallery-item:nth-child(8)  {
   width: 263px;
   margin-right: 30px;
   float: left;
@@ -638,10 +655,6 @@
   }
  }
 }
-.text-showing {
-  text-align: right;
-  margin-top: 30px;
- }
 }
 /*category-food*/
 .category-food {
@@ -649,15 +662,11 @@
   width: 264px;
   margin-top: 30px;
   .pending{
-    width: 263px;
-    height: 70px;
-    border-left: 1px solid map-get($color, gray_ao);
-    border-right: 1px solid map-get($color, gray_ao);
-    border-bottom: 1px solid map-get($color, gray_ao);
+    border: 1px solid map-get($color, gray_ao);
     .title-category {
       border-top: 3px solid map-get($color, green);
-      padding: 25px 20px;
-     font-size: 22px;
+      padding: 20px 25px;
+      font-size: 22px;
     }
   }
   .food-list {
@@ -685,7 +694,7 @@
     border: 1px solid map-get($color, gray_ao);
     .title-searching {
       border-top: 3px solid map-get($color, gray_ao);
-      padding: 25px 20px;
+      padding: 20px 25px;
       font-size: 22px;
     }
   }
@@ -737,7 +746,7 @@
       border: 1px solid map-get($color, gray_ao);
       .title-special {
       border-top: 3px solid map-get($color, gray_ao);
-      padding: 25px 20px;
+      padding: 20px 25px;
       font-size: 22px;
     }
     }
@@ -784,13 +793,11 @@
 
 /* full-newletter*/
 .full-newletter {
-  background-image: url(../images/newletter.png);
-  background-repeat: no-repeat;
+  background: no-repeat url(../images/newletter.png);
   height: 300px;
   .newletter {
     width: 100%;
-    height: 300px;
-    margin-top: 60px;
+    margin-top: 30px;
     display: block;
     text-align: center;
     .title-newletter {
@@ -802,8 +809,7 @@
     }
     .text-newletter {
       color: map-get($color, white);
-      margin-top: 26px;
-      margin-bottom: 24px;
+      margin: 26px 24px;
     }
   }
   .contact-email {
@@ -813,7 +819,7 @@
       height: 46px;
       width: 32%;
       left: 315px;
-      border:none;
+      border: none;
       outline: none;
       text-indent: 5%;
       color: map-get($color, gray_border_v1);
@@ -932,7 +938,6 @@
   height: 90px;
   .copy-left {
     float: left;
-    width: 450px;
     margin-top: 28px;
     a {
       color: map-get($color, green);
