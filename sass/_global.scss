@@ -6,12 +6,11 @@ $color: (
   black: #000,
   white: #fff,
   title: #333,
-  green: #60BA62,
+  green: #60ba62,
   green_1: #46a148,
   green_2: #439a45,
   gray_v1: #363d43,
   gray_v2: #2b3136,
-  gray_border: #E1E1E1,
   gray_border_v1: #999,
   star: #febd49,
   gray_ao: #e1e1e1,
@@ -30,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins';
   font-size: 14px;
   line-height: 1.88;
   color: map-get($color, gray_border_v1);
@@ -51,3 +50,7 @@ body {
   font-family: 'LeckerliOne';
   src: url('../font/LeckerliOne.otf');
  }
+@font-face {
+  font-family: 'Poppins';
+  src: url('../font/jo4.woff2');
+}

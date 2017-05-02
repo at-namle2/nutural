@@ -8,19 +8,17 @@
     float: left;
     background-color: map-get($color, gray_v1);
     .btn-link {
-      padding-bottom: 12px;
-      padding-top: 12px;
+      padding: 12px 20px 12px;
       color: map-get($color, white);
-      padding-right: 20px;
       line-height: 21px;
       background-color: map-get($color, gray_v1);
-      outline: none;
       border: none;
       font-size: 12px;
       cursor: pointer;
+      outline: none;
     }
     .name {
-      color: #60BA62;
+      color: map-get($color, green);
       font-weight: 700;
     }
   }
@@ -30,20 +28,22 @@
     float: right;
     background-color: map-get($color, gray_v1);
     position: relative;
-    .input-search {
+    .seach-box {
+      float: left;
+      .input-search {
       border: none;
       height: 48px;
       line-height: 45px;
       transition: all 0.35s ease 0s;
       background-color: map-get($color, gray_v2);
+      color: map-get($color, white);
       width: 280px;
       padding-left: 20px;
       outline: none;
-      color: map-get($color, white);
-      text-indent: 2%;
     }
     .button-search {
       position: absolute;
+      top: 0;
       width: 49px;
       height: 48px;
       left: 250px;
@@ -53,94 +53,212 @@
       color: map-get($color, white);
       font-size: 14px;
       cursor: pointer;
+     }
     }
-    .btn-card {
-      position: absolute;
-      width: 134px;
-      height: 48px;
-      left: 311px;
-      outline: none;
-      border: none;
-      color: map-get($color, white);
-      background-color: map-get($color, gray_v1);
-      font-size: 14px;
-      cursor: pointer;
-    }
-    .fa-card {
-      font-size: 16px;
-      color: map-get($color, green);
+    .cart {
+      .btn-card {
+        position: absolute;
+        width: 134px;
+        height: 48px;
+        float: left;
+        outline: none;
+        border: none;
+        color: map-get($color, white);
+        background-color: map-get($color, gray_v1);
+        font-size: 14px;
+        cursor: pointer;
+      }
+      .fa-card {
+        font-size: 16px;
+        color: map-get($color, green);
+      }
     }
   }
-
 }
 
 .logo {
   float: left;
-  width: 310px;
-  height: 94px;
+  padding: 10px 0;
   img {
-    margin-top: 10px;
+   display: block;
   }
 }
 .nav-list {
-  height: 94px;
+  height: 90px;
   float: right;
-  .list {
-    margin-top: 30px;
-    padding: 0;
-  }
+  line-height: 90px;
   .list-item {
     position: relative;
     padding: 0 11px;
     display: inline-block;
     list-style: none;
-    a {
-      text-decoration: none;
-      text-transform: uppercase;
+  .sub-menu-page {
+    visibility: hidden;
+    position: absolute;
+    width: 1140px;
+    height: 460px;
+    background-color: map-get($color, white);
+    padding: 5px 20px;
+    top: 90px;
+    right: -390px;
+    list-style: none;
+    border: 1px solid map-get($color, gray_ao);
+    box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.75);
+    box-sizing: border-box;
+    line-height: 1.5;
+    .product {
+      margin: 11px 0 35px;
+      font-weight: 500;
       color: map-get($color, black);
-      &:hover {
-        color: map-get($color, green_2);
       }
-    }
-  }
-  .sub-menu {
-      position: absolute;
-      display: none;
-      width: 200px;
-      height: 210px;
-      background-color: map-get($color, white);
-      padding: 5px 20px;
-      top: 26px;
-      left: 0;
-      list-style: none;
-      border: 1px solid map-get($color, gray_ao);
-      box-shadow: 0px 0px 2px -1px rgba(0,0,0,0.75);
-      .sub-menu-item {
-        border-bottom: 1px dotted map-get($color, gray_ao);
+    .sub-left {
+      float: left;
+      height: 350px;
+      .gallary-special {
+        width: 100%;
+        padding: 15px 25px
+       }
+      .gallary-special-item {
+        width: 110px;
+        height: 100px;
+        float: left;
+        margin-right: 10px;
+        margin: 6px 0 13px;
         a {
-          color: map-get($color, black_2);
-          padding: 5px 20px;
           text-decoration: none;
-          display: block;
-          cursor: pointer;
-          text-transform: lowercase;
-          font-size: 14px;
-          text-align: left;
-          text-transform: capitalize;
-        &:hover {
+          color: map-get($color, black_4);
+          &:hover {
+            color: map-get($color, green_2);
+          }
+        }
+        img {
+          width: 84px;
+          height: 84px;
+        }
+        .price-ness {
           color: map-get($color, green_2);
+          font-size: 16px;
+        }
+        .price-olds {
+          font-size: 12px;
+          text-decoration: underline;
+        }
+        .fa-star {
+          color: map-get($color, star);
         }
       }
     }
+    .sub-right {
+      float: right;
+      width: 750px;
+      height: 350px;
+      .sublime {
+        width: 100%;
+        padding: 15px 25px;
+        .sublime-item {
+          width: 210px;
+          height: 100px;
+          float: left;
+          margin-right: 10px;
+          margin: 6px 0 13px;
+          .open {
+            margin-bottom: 35px;
+            font-weight: 500;
+            color: map-get($color, black);
+          }
+          .menu {
+            width: 170px;
+            .ipsum {
+              width: 302px;
+            }
+            .menu-item {
+              list-style: none;
+              border-bottom: 1px dotted map-get($color, gray_ao);
+              padding: 5px 0 10px;
+              a {
+                text-transform: lowercase;
+                text-transform: capitalize;
+                color: map-get($color, black);
+                line-height: 1.5;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sub-menu-item {
+      border-bottom: 1px dotted map-get($color, gray_ao);
+      a {
+        color: map-get($color, black_2);
+        padding: 5px 20px;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        text-transform: lowercase;
+        font-size: 14px;
+        text-align: left;
+        text-transform: capitalize;
+        &:hover {
+        color: map-get($color, green_2);
+      }
+     }
+    }
   }
- .list-item:hover .sub-menu {
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: map-get($color, black);
+    &:hover {
+      color: map-get($color, green_2);
+    }
+  }
+ }
+  .sub-menu {
+    position: absolute;
+    display: none;
+    width: 200px;
+    height: 210px;
+    background-color: map-get($color, white);
+    padding: 5px 20px;
+    top: 90px;
+    left: 0;
+    list-style: none;
+    border: 1px solid map-get($color, gray_ao);
+    box-shadow: 0px 0px 2px -1px rgba(0,0,0,0.75);
+    line-height: 1.5;
+    .sub-menu-item {
+      border-bottom: 1px dotted map-get($color, gray_ao);
+    a {
+      color: map-get($color, black_2);
+      padding: 5px 20px;
+      text-decoration: none;
+      display: block;
+      cursor: pointer;
+      text-transform: lowercase;
+      font-size: 14px;
+      text-align: left;
+      text-transform: capitalize;
+      &:hover {
+      color: map-get($color, green_2);
+      }
+     }
+    }
+  }
+
+  .list-item:hover .sub-menu {
     display: block;
   }
+  .list-item:hover .sub-menu-page {
+    display: block;
+    visibility: visible;
+  }
 }
+/*banner*/
 .banner {
-  background-image: url(../images/category.png);
-  background-repeat: no-repeat;
+  background: no-repeat url(../images/category.png);
   height: 100px;
+  background-size: cover;
   .baner {
     display: block;
     text-align: center;
@@ -182,68 +300,71 @@
   .sort-by {
     height: 80px;
     text-transform: uppercase;
-    border-top: 1px solid map-get($color, gray_border);
-    border-bottom: 1px solid map-get($color, gray_border);
+    border-top: 1px solid map-get($color, gray_ao);
+    border-bottom: 1px solid map-get($color, gray_ao);
     .btn-large {
       padding: 7px;
       font-size: 14px;
       vertical-align: middle;
-      border: 1px solid map-get($color, gray_border);
-      background-color: map-get($color, green);
-      color: map-get($color, white);
+      border: 1px solid map-get($color, gray_ao);
+      color: map-get($color, gray_border_v1);
+      background-color: map-get($color, white);
       line-height: 0;
       outline: none;
       margin-right: 3px;
       margin: 25px 0;
       cursor: pointer;
+      &:hover {
+        background-color: map-get($color, green);
+      }
     }
     .tooltip {
-        position: relative;
-        display: inline-block;
-
-        .tooltiptext {
+      display: inline-block;
+      .tooltiptext {
+        width: 48px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        padding: 18px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 184%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 1s;
+        text-transform: capitalize;
+        &:hover {
+          visibility: visible;
+          opacity: 1;
+        }
+        &:after {
+          content: '';
           position: absolute;
-          width: 100px;
-          height: 30px;
-          background-color: red;
-          color: map-get($color, white);
-          z-index: 1;
-          bottom: 125%;
-          left: 98%;
-          margin-left: -60px;
-          opacity: 0;
-          transition: opacity 1s;
-          &:hover {
-            visibility: visible;
-            opacity: 1;
-          }
-          &:after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: #555 transparent transparent transparent;
-          }
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
         }
       }
+    }
     .btn-list {
       padding: 7px;
       font-size: 14px;
       vertical-align: middle;
-      border: 1px solid map-get($color, gray_border);
-      background-color: map-get($color, white);
-      color: map-get($color, gray_border_v1);
-      line-height: 0;
+      border: 1px solid map-get($color, gray_ao);
+      color: map-get($color, white);
+      background-color: map-get($color, green);
       outline: none;
       margin-right: 73px;
       cursor: pointer;
+      line-height: 0;
     }
     .compare {
-      display: block;
-      margin-top: -50px;
+      display: inline-block;
+      margin-left: 130px;
       text-align: right;
       text-transform: uppercase;
       a {
@@ -264,9 +385,9 @@
       height: 30px;
       width: 17%;
       background-color: map-get($color, white);
-      border: 1px solid map-get($color, gray_border);
-      outline: none;
+      border: 1px solid map-get($color, gray_ao);
       color: map-get($color, gray_border_v1);
+      outline: none;
     }
   }
   .refine-search {
@@ -281,24 +402,148 @@
   .dress-list-item {
     display: inline-block;
     list-style: none;
-    margin-right: 300px;
+    width: 49%;
   }
   .dress-list-item a {
     text-decoration: none;
     color: map-get($color, black);
     font-weight: 600;
+    &:hover {
+      color: map-get($color, green);
+    }
   }
+}
+/*product*/
+.text-showing {
+  text-align: right;
+  padding: 20px 0;
+  border-top: 1px solid map-get($color, gray_ao);
 }
 .product-block {
   margin-top: 30px;
-  height: 1370px;
-  border-bottom: 1px solid map-get($color, gray_border);
+  display: inline-block;
 .gallery {
-    width: 100%;
-    width: 1000px;
+ width: 100%;
+.gallery-item:nth-child(3),
+.gallery-item:nth-child(6),
+.gallery-item:nth-child(9)  {
+  margin-right: 0;
+  width: 263px;
+  float: left;
+  height: 465px;
+  .sale {
     position: relative;
+    .sales {
+      color: map-get($color, white);
+      font-size: 11px;
+      position: absolute;
+      bottom: 230px;
+      background: map-get($color, green);
+      left: 10px;
+      height: 20px;
+      line-height: 20px;
+      padding: 0px 10px;
+    }
+   }
+    .content {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding-top: 0 5px;
+    .img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      width: 100%;
+      height: 0;
+      transition: .5s ease;
+      font-size: 12px;
+      .text {
+        display: inline-block;
+        overflow: hidden;
+        top: -4%;
+        left: 8px;
+        font-size: 20px;
+        padding: 4px 4px;
+        }
+        a {
+          color: map-get($color, white);
+          &:hover {
+            color: map-get($color, green_2);
+          }
+        }
+      }
+     &:hover .overlay {
+      height: 15%;
+     }
+   }
+  .titile-product {
+   padding: 10px 0 1px;
+   a {
+    text-decoration: none;
+    color: map-get($color, black);
+     &:hover {
+      color: map-get($color, green_2);
+     }
+    }
   }
-.gallery-item {
+  .price {
+    padding: 4px 0;
+    .price-news {
+      color: map-get($color, green);
+    }
+    .price-old {
+      color: map-get($color, gray_border_v1);
+      font-size: 12px;
+      text-decoration: underline;
+      padding-left: 5px;
+    }
+  }
+   .rating {
+    .fa-star {
+      color: map-get($color, star);
+    }
+  }
+  .add-to-card {
+    width: 130px;
+    height: 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 7px;
+    color: map-get($color, gray_border_v1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: none;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 30px;
+    &:hover {
+      background-color: map-get($color, green_2);
+      color: map-get($color, white);
+    }
+  }
+  .fa-add {
+    padding: 0 7px;
+    font-size: 14px;
+  }
+  img {
+    width: 100%;
+  }
+ }
+}
+.gallery-item:nth-child(1),
+.gallery-item:nth-child(2),
+.gallery-item:nth-child(4),
+.gallery-item:nth-child(5),
+.gallery-item:nth-child(7),
+.gallery-item:nth-child(8)  {
   width: 263px;
   margin-right: 30px;
   float: left;
@@ -316,7 +561,7 @@
       line-height: 20px;
       padding: 0px 10px;
     }
-  }
+   }
   .content {
     position: relative;
     display: block;
@@ -345,6 +590,7 @@
         left: 8px;
         font-size: 20px;
         padding: 4px 4px;
+        }
         a {
           color: map-get($color, white);
           &:hover {
@@ -352,11 +598,10 @@
           }
         }
       }
-    }
      &:hover .overlay {
       height: 15%;
+     }
    }
-  }
   .titile-product {
    padding: 10px 0 1px;
    a {
@@ -364,8 +609,8 @@
     color: map-get($color, black);
      &:hover {
       color: map-get($color, green_2);
+     }
     }
-   }
   }
   .price {
     padding: 4px 0;
@@ -410,26 +655,18 @@
   }
  }
 }
-.text-showing {
-  text-align: right;
-  margin-top: 30px;
 }
-}
+/*category-food*/
 .category-food {
   float: right;
   width: 264px;
   margin-top: 30px;
-  margin-right: -10px;
   .pending{
-    width: 263px;
-    height: 70px;
-    border-left: 1px solid map-get($color, gray_ao);
-    border-right: 1px solid map-get($color, gray_ao);
-    border-bottom: 1px solid map-get($color, gray_ao);
+    border: 1px solid map-get($color, gray_ao);
     .title-category {
       border-top: 3px solid map-get($color, green);
-      padding: 25px 20px;
-     font-size: 22px;
+      padding: 20px 25px;
+      font-size: 22px;
     }
   }
   .food-list {
@@ -454,12 +691,10 @@
    .pend {
     width: 263px;
     height: 70px;
-    border-left: 1px solid map-get($color, gray_ao);
-    border-right: 1px solid map-get($color, gray_ao);
-    border-bottom: 1px solid map-get($color, gray_ao);
+    border: 1px solid map-get($color, gray_ao);
     .title-searching {
       border-top: 3px solid map-get($color, gray_ao);
-      padding: 25px 20px;
+      padding: 20px 25px;
       font-size: 22px;
     }
   }
@@ -508,12 +743,10 @@
     .pendy {
       width: 263px;
       height: 70px;
-      border-left: 1px solid map-get($color, gray_ao);
-      border-right: 1px solid map-get($color, gray_ao);
-      border-bottom: 1px solid map-get($color, gray_ao);
+      border: 1px solid map-get($color, gray_ao);
       .title-special {
       border-top: 3px solid map-get($color, gray_ao);
-      padding: 25px 20px;
+      padding: 20px 25px;
       font-size: 22px;
     }
     }
@@ -560,13 +793,11 @@
 
 /* full-newletter*/
 .full-newletter {
-  background-image: url(../images/newletter.png);
-  background-repeat: no-repeat;
+  background: no-repeat url(../images/newletter.png);
   height: 300px;
   .newletter {
     width: 100%;
-    height: 300px;
-    margin-top: 60px;
+    margin-top: 30px;
     display: block;
     text-align: center;
     .title-newletter {
@@ -578,8 +809,7 @@
     }
     .text-newletter {
       color: map-get($color, white);
-      margin-top: 26px;
-      margin-bottom: 24px;
+      margin: 26px 24px;
     }
   }
   .contact-email {
@@ -589,7 +819,7 @@
       height: 46px;
       width: 32%;
       left: 315px;
-      border:none;
+      border: none;
       outline: none;
       text-indent: 5%;
       color: map-get($color, gray_border_v1);
@@ -602,8 +832,8 @@
       border: none;
       outline: none;
       background: map-get($color, green_2);
-      text-transform: uppercase;
       color: map-get($color, white);
+      text-transform: uppercase;
       cursor: pointer;
       font-size: 14px;
       &:hover {
@@ -612,7 +842,6 @@
     }
   }
 }
-
 
 /*footer*/
 .footer-content {
@@ -672,7 +901,6 @@
       height: 250px;
       float: left;
       margin: 0 5px;
-
       .list-extras {
         margin-top: 40px;
         padding: 0;
@@ -686,18 +914,19 @@
           font-size: 13px;
           text-decoration: none;
           color: map-get($color, gray_border_v1);
-          &:before {
-            top: 2px;
-            left: 0;
-            content: "\f105";
-            position: absolute;
-            font-family: "fontawesome";
-            font-size: 12px;
-            line-height: normal;
-          }
+          transition: all 0.35s ease;
           &:hover {
             padding-left: 12px;
             color: map-get($color, green);
+              &:before {
+              top: 2px;
+              left: 0;
+              content: "\f105";
+              position: absolute;
+              font-size: 12px;
+              line-height: normal;
+              font-family: "fontawesome";
+            }
           }
         }
       }
@@ -709,7 +938,6 @@
   height: 90px;
   .copy-left {
     float: left;
-    width: 450px;
     margin-top: 28px;
     a {
       color: map-get($color, green);
@@ -721,6 +949,6 @@
   }
   .copy-right {
     float: right;
-     margin-top: 28px;
+    margin-top: 28px;
   }
 }

@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #333; }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins';
   font-size: 14px;
   line-height: 1.88;
   color: #999;
@@ -26,6 +26,9 @@ body {
 @font-face {
   font-family: 'LeckerliOne';
   src: url("../font/LeckerliOne.otf"); }
+@font-face {
+  font-family: 'Poppins';
+  src: url("../font/jo4.woff2"); }
 .head_v1 {
   background-color: #363d43; }
   .head_v1 .language {
@@ -34,18 +37,16 @@ body {
     float: left;
     background-color: #363d43; }
     .head_v1 .language .btn-link {
-      padding-bottom: 12px;
-      padding-top: 12px;
+      padding: 12px 20px 12px;
       color: #fff;
-      padding-right: 20px;
       line-height: 21px;
       background-color: #363d43;
-      outline: none;
       border: none;
       font-size: 12px;
-      cursor: pointer; }
+      cursor: pointer;
+      outline: none; }
     .head_v1 .language .name {
-      color: #60BA62;
+      color: #60ba62;
       font-weight: 700; }
   .head_v1 .seach {
     width: 446px;
@@ -53,61 +54,151 @@ body {
     float: right;
     background-color: #363d43;
     position: relative; }
-    .head_v1 .seach .input-search {
-      border: none;
-      height: 48px;
-      line-height: 45px;
-      transition: all 0.35s ease 0s;
-      background-color: #2b3136;
-      width: 280px;
-      padding-left: 20px;
-      outline: none;
-      color: #fff;
-      text-indent: 2%; }
-    .head_v1 .seach .button-search {
-      position: absolute;
-      width: 49px;
-      height: 48px;
-      left: 250px;
-      outline: none;
-      border: none;
-      background-color: #2b3136;
-      color: #fff;
-      font-size: 14px;
-      cursor: pointer; }
-    .head_v1 .seach .btn-card {
+    .head_v1 .seach .seach-box {
+      float: left; }
+      .head_v1 .seach .seach-box .input-search {
+        border: none;
+        height: 48px;
+        line-height: 45px;
+        transition: all 0.35s ease 0s;
+        background-color: #2b3136;
+        color: #fff;
+        width: 280px;
+        padding-left: 20px;
+        outline: none; }
+      .head_v1 .seach .seach-box .button-search {
+        position: absolute;
+        top: 0;
+        width: 49px;
+        height: 48px;
+        left: 250px;
+        outline: none;
+        border: none;
+        background-color: #2b3136;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer; }
+    .head_v1 .seach .cart .btn-card {
       position: absolute;
       width: 134px;
       height: 48px;
-      left: 311px;
+      float: left;
       outline: none;
       border: none;
       color: #fff;
       background-color: #363d43;
       font-size: 14px;
       cursor: pointer; }
-    .head_v1 .seach .fa-card {
+    .head_v1 .seach .cart .fa-card {
       font-size: 16px;
-      color: #60BA62; }
+      color: #60ba62; }
 
 .logo {
   float: left;
-  width: 310px;
-  height: 94px; }
+  padding: 10px 0; }
   .logo img {
-    margin-top: 10px; }
+    display: block; }
 
 .nav-list {
-  height: 94px;
-  float: right; }
-  .nav-list .list {
-    margin-top: 30px;
-    padding: 0; }
+  height: 90px;
+  float: right;
+  line-height: 90px; }
   .nav-list .list-item {
     position: relative;
     padding: 0 11px;
     display: inline-block;
     list-style: none; }
+    .nav-list .list-item .sub-menu-page {
+      visibility: hidden;
+      position: absolute;
+      width: 1140px;
+      height: 460px;
+      background-color: #fff;
+      padding: 5px 20px;
+      top: 90px;
+      right: -390px;
+      list-style: none;
+      border: 1px solid #e1e1e1;
+      box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.75);
+      box-sizing: border-box;
+      line-height: 1.5; }
+      .nav-list .list-item .sub-menu-page .product {
+        margin: 11px 0 35px;
+        font-weight: 500;
+        color: #000; }
+      .nav-list .list-item .sub-menu-page .sub-left {
+        float: left;
+        height: 350px; }
+        .nav-list .list-item .sub-menu-page .sub-left .gallary-special {
+          width: 100%;
+          padding: 15px 25px; }
+        .nav-list .list-item .sub-menu-page .sub-left .gallary-special-item {
+          width: 110px;
+          height: 100px;
+          float: left;
+          margin-right: 10px;
+          margin: 6px 0 13px; }
+          .nav-list .list-item .sub-menu-page .sub-left .gallary-special-item a {
+            text-decoration: none;
+            color: #162118; }
+            .nav-list .list-item .sub-menu-page .sub-left .gallary-special-item a:hover {
+              color: #439a45; }
+          .nav-list .list-item .sub-menu-page .sub-left .gallary-special-item img {
+            width: 84px;
+            height: 84px; }
+          .nav-list .list-item .sub-menu-page .sub-left .gallary-special-item .price-ness {
+            color: #439a45;
+            font-size: 16px; }
+          .nav-list .list-item .sub-menu-page .sub-left .gallary-special-item .price-olds {
+            font-size: 12px;
+            text-decoration: underline; }
+          .nav-list .list-item .sub-menu-page .sub-left .gallary-special-item .fa-star {
+            color: #febd49; }
+      .nav-list .list-item .sub-menu-page .sub-right {
+        float: right;
+        width: 750px;
+        height: 350px; }
+        .nav-list .list-item .sub-menu-page .sub-right .sublime {
+          width: 100%;
+          padding: 15px 25px; }
+          .nav-list .list-item .sub-menu-page .sub-right .sublime .sublime-item {
+            width: 210px;
+            height: 100px;
+            float: left;
+            margin-right: 10px;
+            margin: 6px 0 13px; }
+            .nav-list .list-item .sub-menu-page .sub-right .sublime .sublime-item .open {
+              margin-bottom: 35px;
+              font-weight: 500;
+              color: #000; }
+            .nav-list .list-item .sub-menu-page .sub-right .sublime .sublime-item .menu {
+              width: 170px; }
+              .nav-list .list-item .sub-menu-page .sub-right .sublime .sublime-item .menu .ipsum {
+                width: 302px; }
+              .nav-list .list-item .sub-menu-page .sub-right .sublime .sublime-item .menu .menu-item {
+                list-style: none;
+                border-bottom: 1px dotted #e1e1e1;
+                padding: 5px 0 10px; }
+                .nav-list .list-item .sub-menu-page .sub-right .sublime .sublime-item .menu .menu-item a {
+                  text-transform: lowercase;
+                  text-transform: capitalize;
+                  color: #000;
+                  line-height: 1.5;
+                  font-weight: 500; }
+      .nav-list .list-item .sub-menu-page .sub-menu-item {
+        border-bottom: 1px dotted #e1e1e1; }
+        .nav-list .list-item .sub-menu-page .sub-menu-item a {
+          color: #1a1a1a;
+          padding: 5px 20px;
+          text-decoration: none;
+          display: block;
+          cursor: pointer;
+          text-transform: lowercase;
+          font-size: 14px;
+          text-align: left;
+          text-transform: capitalize; }
+          .nav-list .list-item .sub-menu-page .sub-menu-item a:hover {
+            color: #439a45; }
     .nav-list .list-item a {
       text-decoration: none;
       text-transform: uppercase;
@@ -121,11 +212,12 @@ body {
     height: 210px;
     background-color: #fff;
     padding: 5px 20px;
-    top: 26px;
+    top: 90px;
     left: 0;
     list-style: none;
     border: 1px solid #e1e1e1;
-    box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.75); }
+    box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.75);
+    line-height: 1.5; }
     .nav-list .sub-menu .sub-menu-item {
       border-bottom: 1px dotted #e1e1e1; }
       .nav-list .sub-menu .sub-menu-item a {
@@ -142,11 +234,15 @@ body {
           color: #439a45; }
   .nav-list .list-item:hover .sub-menu {
     display: block; }
+  .nav-list .list-item:hover .sub-menu-page {
+    display: block;
+    visibility: visible; }
 
+/*banner*/
 .banner {
-  background-image: url(../images/category.png);
-  background-repeat: no-repeat;
-  height: 100px; }
+  background: no-repeat url(../images/category.png);
+  height: 100px;
+  background-size: cover; }
   .banner .baner {
     display: block;
     text-align: center; }
@@ -173,42 +269,46 @@ body {
 .natural-food {
   float: left;
   width: 850px;
-  margin-top: 30px; }
+  margin-top: 30px;
+  /*product*/ }
   .natural-food .title-breakfas {
     margin-bottom: 13px;
     font-size: 30px; }
   .natural-food .sort-by {
     height: 80px;
     text-transform: uppercase;
-    border-top: 1px solid #E1E1E1;
-    border-bottom: 1px solid #E1E1E1; }
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1; }
     .natural-food .sort-by .btn-large {
       padding: 7px;
       font-size: 14px;
       vertical-align: middle;
-      border: 1px solid #E1E1E1;
-      background-color: #60BA62;
-      color: #fff;
+      border: 1px solid #e1e1e1;
+      color: #999;
+      background-color: #fff;
       line-height: 0;
       outline: none;
       margin-right: 3px;
       margin: 25px 0;
       cursor: pointer; }
+      .natural-food .sort-by .btn-large:hover {
+        background-color: #60ba62; }
     .natural-food .sort-by .tooltip {
-      position: relative;
       display: inline-block; }
       .natural-food .sort-by .tooltip .tooltiptext {
-        position: absolute;
-        width: 100px;
-        height: 30px;
-        background-color: red;
+        width: 48px;
+        background-color: #555;
         color: #fff;
+        text-align: center;
+        padding: 18px 0;
+        position: absolute;
         z-index: 1;
         bottom: 125%;
-        left: 98%;
+        left: 184%;
         margin-left: -60px;
         opacity: 0;
-        transition: opacity 1s; }
+        transition: opacity 1s;
+        text-transform: capitalize; }
         .natural-food .sort-by .tooltip .tooltiptext:hover {
           visibility: visible;
           opacity: 1; }
@@ -225,16 +325,16 @@ body {
       padding: 7px;
       font-size: 14px;
       vertical-align: middle;
-      border: 1px solid #E1E1E1;
-      background-color: #fff;
-      color: #999;
-      line-height: 0;
+      border: 1px solid #e1e1e1;
+      color: #fff;
+      background-color: #60ba62;
       outline: none;
       margin-right: 73px;
-      cursor: pointer; }
+      cursor: pointer;
+      line-height: 0; }
     .natural-food .sort-by .compare {
-      display: block;
-      margin-top: -50px;
+      display: inline-block;
+      margin-left: 130px;
       text-align: right;
       text-transform: uppercase; }
       .natural-food .sort-by .compare a {
@@ -251,9 +351,9 @@ body {
       height: 30px;
       width: 17%;
       background-color: #fff;
-      border: 1px solid #E1E1E1;
-      outline: none;
-      color: #999; }
+      border: 1px solid #e1e1e1;
+      color: #999;
+      outline: none; }
   .natural-food .refine-search {
     margin: 60px 0 30px; }
     .natural-food .refine-search .title-refine {
@@ -264,46 +364,209 @@ body {
     .natural-food .refine-search .dress-list-item {
       display: inline-block;
       list-style: none;
-      margin-right: 300px; }
+      width: 49%; }
     .natural-food .refine-search .dress-list-item a {
       text-decoration: none;
       color: #000;
       font-weight: 600; }
+      .natural-food .refine-search .dress-list-item a:hover {
+        color: #60ba62; }
+  .natural-food .text-showing {
+    text-align: right;
+    padding: 20px 0;
+    border-top: 1px solid #e1e1e1; }
   .natural-food .product-block {
     margin-top: 30px;
-    height: 1370px;
-    border-bottom: 1px solid #E1E1E1; }
+    display: inline-block; }
     .natural-food .product-block .gallery {
-      width: 100%;
-      width: 1000px;
-      position: relative; }
-    .natural-food .product-block .gallery-item {
+      width: 100%; }
+      .natural-food .product-block .gallery .gallery-item:nth-child(3),
+      .natural-food .product-block .gallery .gallery-item:nth-child(6),
+      .natural-food .product-block .gallery .gallery-item:nth-child(9) {
+        margin-right: 0;
+        width: 263px;
+        float: left;
+        height: 465px; }
+        .natural-food .product-block .gallery .gallery-item:nth-child(3) .sale,
+        .natural-food .product-block .gallery .gallery-item:nth-child(6) .sale,
+        .natural-food .product-block .gallery .gallery-item:nth-child(9) .sale {
+          position: relative; }
+          .natural-food .product-block .gallery .gallery-item:nth-child(3) .sale .sales,
+          .natural-food .product-block .gallery .gallery-item:nth-child(6) .sale .sales,
+          .natural-food .product-block .gallery .gallery-item:nth-child(9) .sale .sales {
+            color: #fff;
+            font-size: 11px;
+            position: absolute;
+            bottom: 230px;
+            background: #60ba62;
+            left: 10px;
+            height: 20px;
+            line-height: 20px;
+            padding: 0px 10px; }
+        .natural-food .product-block .gallery .gallery-item:nth-child(3) .content,
+        .natural-food .product-block .gallery .gallery-item:nth-child(6) .content,
+        .natural-food .product-block .gallery .gallery-item:nth-child(9) .content {
+          position: relative;
+          display: block;
+          text-align: center;
+          padding-top: 0 5px; }
+          .natural-food .product-block .gallery .gallery-item:nth-child(3) .content .img,
+          .natural-food .product-block .gallery .gallery-item:nth-child(6) .content .img,
+          .natural-food .product-block .gallery .gallery-item:nth-child(9) .content .img {
+            display: block;
+            width: 100%;
+            height: auto; }
+          .natural-food .product-block .gallery .gallery-item:nth-child(3) .content .overlay,
+          .natural-food .product-block .gallery .gallery-item:nth-child(6) .content .overlay,
+          .natural-food .product-block .gallery .gallery-item:nth-child(9) .content .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+            font-size: 12px; }
+            .natural-food .product-block .gallery .gallery-item:nth-child(3) .content .overlay .text,
+            .natural-food .product-block .gallery .gallery-item:nth-child(6) .content .overlay .text,
+            .natural-food .product-block .gallery .gallery-item:nth-child(9) .content .overlay .text {
+              display: inline-block;
+              overflow: hidden;
+              top: -4%;
+              left: 8px;
+              font-size: 20px;
+              padding: 4px 4px; }
+            .natural-food .product-block .gallery .gallery-item:nth-child(3) .content .overlay a,
+            .natural-food .product-block .gallery .gallery-item:nth-child(6) .content .overlay a,
+            .natural-food .product-block .gallery .gallery-item:nth-child(9) .content .overlay a {
+              color: #fff; }
+              .natural-food .product-block .gallery .gallery-item:nth-child(3) .content .overlay a:hover,
+              .natural-food .product-block .gallery .gallery-item:nth-child(6) .content .overlay a:hover,
+              .natural-food .product-block .gallery .gallery-item:nth-child(9) .content .overlay a:hover {
+                color: #439a45; }
+          .natural-food .product-block .gallery .gallery-item:nth-child(3) .content:hover .overlay,
+          .natural-food .product-block .gallery .gallery-item:nth-child(6) .content:hover .overlay,
+          .natural-food .product-block .gallery .gallery-item:nth-child(9) .content:hover .overlay {
+            height: 15%; }
+        .natural-food .product-block .gallery .gallery-item:nth-child(3) .titile-product,
+        .natural-food .product-block .gallery .gallery-item:nth-child(6) .titile-product,
+        .natural-food .product-block .gallery .gallery-item:nth-child(9) .titile-product {
+          padding: 10px 0 1px; }
+          .natural-food .product-block .gallery .gallery-item:nth-child(3) .titile-product a,
+          .natural-food .product-block .gallery .gallery-item:nth-child(6) .titile-product a,
+          .natural-food .product-block .gallery .gallery-item:nth-child(9) .titile-product a {
+            text-decoration: none;
+            color: #000; }
+            .natural-food .product-block .gallery .gallery-item:nth-child(3) .titile-product a:hover,
+            .natural-food .product-block .gallery .gallery-item:nth-child(6) .titile-product a:hover,
+            .natural-food .product-block .gallery .gallery-item:nth-child(9) .titile-product a:hover {
+              color: #439a45; }
+        .natural-food .product-block .gallery .gallery-item:nth-child(3) .price,
+        .natural-food .product-block .gallery .gallery-item:nth-child(6) .price,
+        .natural-food .product-block .gallery .gallery-item:nth-child(9) .price {
+          padding: 4px 0; }
+          .natural-food .product-block .gallery .gallery-item:nth-child(3) .price .price-news,
+          .natural-food .product-block .gallery .gallery-item:nth-child(6) .price .price-news,
+          .natural-food .product-block .gallery .gallery-item:nth-child(9) .price .price-news {
+            color: #60ba62; }
+          .natural-food .product-block .gallery .gallery-item:nth-child(3) .price .price-old,
+          .natural-food .product-block .gallery .gallery-item:nth-child(6) .price .price-old,
+          .natural-food .product-block .gallery .gallery-item:nth-child(9) .price .price-old {
+            color: #999;
+            font-size: 12px;
+            text-decoration: underline;
+            padding-left: 5px; }
+        .natural-food .product-block .gallery .gallery-item:nth-child(3) .rating .fa-star,
+        .natural-food .product-block .gallery .gallery-item:nth-child(6) .rating .fa-star,
+        .natural-food .product-block .gallery .gallery-item:nth-child(9) .rating .fa-star {
+          color: #febd49; }
+        .natural-food .product-block .gallery .gallery-item:nth-child(3) .add-to-card,
+        .natural-food .product-block .gallery .gallery-item:nth-child(6) .add-to-card,
+        .natural-food .product-block .gallery .gallery-item:nth-child(9) .add-to-card {
+          width: 130px;
+          height: 30px;
+          font-size: 12px;
+          text-transform: uppercase;
+          margin-top: 7px;
+          color: #999;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          background: none;
+          outline: none;
+          cursor: pointer;
+          margin-bottom: 30px; }
+          .natural-food .product-block .gallery .gallery-item:nth-child(3) .add-to-card:hover,
+          .natural-food .product-block .gallery .gallery-item:nth-child(6) .add-to-card:hover,
+          .natural-food .product-block .gallery .gallery-item:nth-child(9) .add-to-card:hover {
+            background-color: #439a45;
+            color: #fff; }
+        .natural-food .product-block .gallery .gallery-item:nth-child(3) .fa-add,
+        .natural-food .product-block .gallery .gallery-item:nth-child(6) .fa-add,
+        .natural-food .product-block .gallery .gallery-item:nth-child(9) .fa-add {
+          padding: 0 7px;
+          font-size: 14px; }
+        .natural-food .product-block .gallery .gallery-item:nth-child(3) img,
+        .natural-food .product-block .gallery .gallery-item:nth-child(6) img,
+        .natural-food .product-block .gallery .gallery-item:nth-child(9) img {
+          width: 100%; }
+    .natural-food .product-block .gallery-item:nth-child(1),
+    .natural-food .product-block .gallery-item:nth-child(2),
+    .natural-food .product-block .gallery-item:nth-child(4),
+    .natural-food .product-block .gallery-item:nth-child(5),
+    .natural-food .product-block .gallery-item:nth-child(7),
+    .natural-food .product-block .gallery-item:nth-child(8) {
       width: 263px;
       margin-right: 30px;
       float: left;
       height: 465px; }
-      .natural-food .product-block .gallery-item .sale {
+      .natural-food .product-block .gallery-item:nth-child(1) .sale,
+      .natural-food .product-block .gallery-item:nth-child(2) .sale,
+      .natural-food .product-block .gallery-item:nth-child(4) .sale,
+      .natural-food .product-block .gallery-item:nth-child(5) .sale,
+      .natural-food .product-block .gallery-item:nth-child(7) .sale,
+      .natural-food .product-block .gallery-item:nth-child(8) .sale {
         position: relative; }
-        .natural-food .product-block .gallery-item .sale .sales {
+        .natural-food .product-block .gallery-item:nth-child(1) .sale .sales,
+        .natural-food .product-block .gallery-item:nth-child(2) .sale .sales,
+        .natural-food .product-block .gallery-item:nth-child(4) .sale .sales,
+        .natural-food .product-block .gallery-item:nth-child(5) .sale .sales,
+        .natural-food .product-block .gallery-item:nth-child(7) .sale .sales,
+        .natural-food .product-block .gallery-item:nth-child(8) .sale .sales {
           color: #fff;
           font-size: 11px;
           position: absolute;
           bottom: 230px;
-          background: #60BA62;
+          background: #60ba62;
           left: 10px;
           height: 20px;
           line-height: 20px;
           padding: 0px 10px; }
-      .natural-food .product-block .gallery-item .content {
+      .natural-food .product-block .gallery-item:nth-child(1) .content,
+      .natural-food .product-block .gallery-item:nth-child(2) .content,
+      .natural-food .product-block .gallery-item:nth-child(4) .content,
+      .natural-food .product-block .gallery-item:nth-child(5) .content,
+      .natural-food .product-block .gallery-item:nth-child(7) .content,
+      .natural-food .product-block .gallery-item:nth-child(8) .content {
         position: relative;
         display: block;
         text-align: center;
         padding-top: 0 5px; }
-        .natural-food .product-block .gallery-item .content .img {
+        .natural-food .product-block .gallery-item:nth-child(1) .content .img,
+        .natural-food .product-block .gallery-item:nth-child(2) .content .img,
+        .natural-food .product-block .gallery-item:nth-child(4) .content .img,
+        .natural-food .product-block .gallery-item:nth-child(5) .content .img,
+        .natural-food .product-block .gallery-item:nth-child(7) .content .img,
+        .natural-food .product-block .gallery-item:nth-child(8) .content .img {
           display: block;
           width: 100%;
           height: auto; }
-        .natural-food .product-block .gallery-item .content .overlay {
+        .natural-food .product-block .gallery-item:nth-child(1) .content .overlay,
+        .natural-food .product-block .gallery-item:nth-child(2) .content .overlay,
+        .natural-food .product-block .gallery-item:nth-child(4) .content .overlay,
+        .natural-food .product-block .gallery-item:nth-child(5) .content .overlay,
+        .natural-food .product-block .gallery-item:nth-child(7) .content .overlay,
+        .natural-food .product-block .gallery-item:nth-child(8) .content .overlay {
           position: absolute;
           bottom: 0;
           left: 0;
@@ -314,38 +577,98 @@ body {
           height: 0;
           transition: .5s ease;
           font-size: 12px; }
-          .natural-food .product-block .gallery-item .content .overlay .text {
+          .natural-food .product-block .gallery-item:nth-child(1) .content .overlay .text,
+          .natural-food .product-block .gallery-item:nth-child(2) .content .overlay .text,
+          .natural-food .product-block .gallery-item:nth-child(4) .content .overlay .text,
+          .natural-food .product-block .gallery-item:nth-child(5) .content .overlay .text,
+          .natural-food .product-block .gallery-item:nth-child(7) .content .overlay .text,
+          .natural-food .product-block .gallery-item:nth-child(8) .content .overlay .text {
             display: inline-block;
             overflow: hidden;
             top: -4%;
             left: 8px;
             font-size: 20px;
             padding: 4px 4px; }
-            .natural-food .product-block .gallery-item .content .overlay .text a {
-              color: #fff; }
-              .natural-food .product-block .gallery-item .content .overlay .text a:hover {
-                color: #439a45; }
-        .natural-food .product-block .gallery-item .content:hover .overlay {
+          .natural-food .product-block .gallery-item:nth-child(1) .content .overlay a,
+          .natural-food .product-block .gallery-item:nth-child(2) .content .overlay a,
+          .natural-food .product-block .gallery-item:nth-child(4) .content .overlay a,
+          .natural-food .product-block .gallery-item:nth-child(5) .content .overlay a,
+          .natural-food .product-block .gallery-item:nth-child(7) .content .overlay a,
+          .natural-food .product-block .gallery-item:nth-child(8) .content .overlay a {
+            color: #fff; }
+            .natural-food .product-block .gallery-item:nth-child(1) .content .overlay a:hover,
+            .natural-food .product-block .gallery-item:nth-child(2) .content .overlay a:hover,
+            .natural-food .product-block .gallery-item:nth-child(4) .content .overlay a:hover,
+            .natural-food .product-block .gallery-item:nth-child(5) .content .overlay a:hover,
+            .natural-food .product-block .gallery-item:nth-child(7) .content .overlay a:hover,
+            .natural-food .product-block .gallery-item:nth-child(8) .content .overlay a:hover {
+              color: #439a45; }
+        .natural-food .product-block .gallery-item:nth-child(1) .content:hover .overlay,
+        .natural-food .product-block .gallery-item:nth-child(2) .content:hover .overlay,
+        .natural-food .product-block .gallery-item:nth-child(4) .content:hover .overlay,
+        .natural-food .product-block .gallery-item:nth-child(5) .content:hover .overlay,
+        .natural-food .product-block .gallery-item:nth-child(7) .content:hover .overlay,
+        .natural-food .product-block .gallery-item:nth-child(8) .content:hover .overlay {
           height: 15%; }
-      .natural-food .product-block .gallery-item .titile-product {
+      .natural-food .product-block .gallery-item:nth-child(1) .titile-product,
+      .natural-food .product-block .gallery-item:nth-child(2) .titile-product,
+      .natural-food .product-block .gallery-item:nth-child(4) .titile-product,
+      .natural-food .product-block .gallery-item:nth-child(5) .titile-product,
+      .natural-food .product-block .gallery-item:nth-child(7) .titile-product,
+      .natural-food .product-block .gallery-item:nth-child(8) .titile-product {
         padding: 10px 0 1px; }
-        .natural-food .product-block .gallery-item .titile-product a {
+        .natural-food .product-block .gallery-item:nth-child(1) .titile-product a,
+        .natural-food .product-block .gallery-item:nth-child(2) .titile-product a,
+        .natural-food .product-block .gallery-item:nth-child(4) .titile-product a,
+        .natural-food .product-block .gallery-item:nth-child(5) .titile-product a,
+        .natural-food .product-block .gallery-item:nth-child(7) .titile-product a,
+        .natural-food .product-block .gallery-item:nth-child(8) .titile-product a {
           text-decoration: none;
           color: #000; }
-          .natural-food .product-block .gallery-item .titile-product a:hover {
+          .natural-food .product-block .gallery-item:nth-child(1) .titile-product a:hover,
+          .natural-food .product-block .gallery-item:nth-child(2) .titile-product a:hover,
+          .natural-food .product-block .gallery-item:nth-child(4) .titile-product a:hover,
+          .natural-food .product-block .gallery-item:nth-child(5) .titile-product a:hover,
+          .natural-food .product-block .gallery-item:nth-child(7) .titile-product a:hover,
+          .natural-food .product-block .gallery-item:nth-child(8) .titile-product a:hover {
             color: #439a45; }
-      .natural-food .product-block .gallery-item .price {
+      .natural-food .product-block .gallery-item:nth-child(1) .price,
+      .natural-food .product-block .gallery-item:nth-child(2) .price,
+      .natural-food .product-block .gallery-item:nth-child(4) .price,
+      .natural-food .product-block .gallery-item:nth-child(5) .price,
+      .natural-food .product-block .gallery-item:nth-child(7) .price,
+      .natural-food .product-block .gallery-item:nth-child(8) .price {
         padding: 4px 0; }
-        .natural-food .product-block .gallery-item .price .price-news {
-          color: #60BA62; }
-        .natural-food .product-block .gallery-item .price .price-old {
+        .natural-food .product-block .gallery-item:nth-child(1) .price .price-news,
+        .natural-food .product-block .gallery-item:nth-child(2) .price .price-news,
+        .natural-food .product-block .gallery-item:nth-child(4) .price .price-news,
+        .natural-food .product-block .gallery-item:nth-child(5) .price .price-news,
+        .natural-food .product-block .gallery-item:nth-child(7) .price .price-news,
+        .natural-food .product-block .gallery-item:nth-child(8) .price .price-news {
+          color: #60ba62; }
+        .natural-food .product-block .gallery-item:nth-child(1) .price .price-old,
+        .natural-food .product-block .gallery-item:nth-child(2) .price .price-old,
+        .natural-food .product-block .gallery-item:nth-child(4) .price .price-old,
+        .natural-food .product-block .gallery-item:nth-child(5) .price .price-old,
+        .natural-food .product-block .gallery-item:nth-child(7) .price .price-old,
+        .natural-food .product-block .gallery-item:nth-child(8) .price .price-old {
           color: #999;
           font-size: 12px;
           text-decoration: underline;
           padding-left: 5px; }
-      .natural-food .product-block .gallery-item .rating .fa-star {
+      .natural-food .product-block .gallery-item:nth-child(1) .rating .fa-star,
+      .natural-food .product-block .gallery-item:nth-child(2) .rating .fa-star,
+      .natural-food .product-block .gallery-item:nth-child(4) .rating .fa-star,
+      .natural-food .product-block .gallery-item:nth-child(5) .rating .fa-star,
+      .natural-food .product-block .gallery-item:nth-child(7) .rating .fa-star,
+      .natural-food .product-block .gallery-item:nth-child(8) .rating .fa-star {
         color: #febd49; }
-      .natural-food .product-block .gallery-item .add-to-card {
+      .natural-food .product-block .gallery-item:nth-child(1) .add-to-card,
+      .natural-food .product-block .gallery-item:nth-child(2) .add-to-card,
+      .natural-food .product-block .gallery-item:nth-child(4) .add-to-card,
+      .natural-food .product-block .gallery-item:nth-child(5) .add-to-card,
+      .natural-food .product-block .gallery-item:nth-child(7) .add-to-card,
+      .natural-food .product-block .gallery-item:nth-child(8) .add-to-card {
         width: 130px;
         height: 30px;
         font-size: 12px;
@@ -357,32 +680,40 @@ body {
         outline: none;
         cursor: pointer;
         margin-bottom: 30px; }
-        .natural-food .product-block .gallery-item .add-to-card:hover {
+        .natural-food .product-block .gallery-item:nth-child(1) .add-to-card:hover,
+        .natural-food .product-block .gallery-item:nth-child(2) .add-to-card:hover,
+        .natural-food .product-block .gallery-item:nth-child(4) .add-to-card:hover,
+        .natural-food .product-block .gallery-item:nth-child(5) .add-to-card:hover,
+        .natural-food .product-block .gallery-item:nth-child(7) .add-to-card:hover,
+        .natural-food .product-block .gallery-item:nth-child(8) .add-to-card:hover {
           background-color: #439a45;
           color: #fff; }
-      .natural-food .product-block .gallery-item .fa-add {
+      .natural-food .product-block .gallery-item:nth-child(1) .fa-add,
+      .natural-food .product-block .gallery-item:nth-child(2) .fa-add,
+      .natural-food .product-block .gallery-item:nth-child(4) .fa-add,
+      .natural-food .product-block .gallery-item:nth-child(5) .fa-add,
+      .natural-food .product-block .gallery-item:nth-child(7) .fa-add,
+      .natural-food .product-block .gallery-item:nth-child(8) .fa-add {
         padding: 0 7px;
         font-size: 14px; }
-      .natural-food .product-block .gallery-item img {
+      .natural-food .product-block .gallery-item:nth-child(1) img,
+      .natural-food .product-block .gallery-item:nth-child(2) img,
+      .natural-food .product-block .gallery-item:nth-child(4) img,
+      .natural-food .product-block .gallery-item:nth-child(5) img,
+      .natural-food .product-block .gallery-item:nth-child(7) img,
+      .natural-food .product-block .gallery-item:nth-child(8) img {
         width: 100%; }
-  .natural-food .text-showing {
-    text-align: right;
-    margin-top: 30px; }
 
+/*category-food*/
 .category-food {
   float: right;
   width: 264px;
-  margin-top: 30px;
-  margin-right: -10px; }
+  margin-top: 30px; }
   .category-food .pending {
-    width: 263px;
-    height: 70px;
-    border-left: 1px solid #e1e1e1;
-    border-right: 1px solid #e1e1e1;
-    border-bottom: 1px solid #e1e1e1; }
+    border: 1px solid #e1e1e1; }
     .category-food .pending .title-category {
-      border-top: 3px solid #60BA62;
-      padding: 25px 20px;
+      border-top: 3px solid #60ba62;
+      padding: 20px 25px;
       font-size: 22px; }
   .category-food .food-list {
     margin-bottom: 30px;
@@ -402,12 +733,10 @@ body {
   .category-food .pend {
     width: 263px;
     height: 70px;
-    border-left: 1px solid #e1e1e1;
-    border-right: 1px solid #e1e1e1;
-    border-bottom: 1px solid #e1e1e1; }
+    border: 1px solid #e1e1e1; }
     .category-food .pend .title-searching {
       border-top: 3px solid #e1e1e1;
-      padding: 25px 20px;
+      padding: 20px 25px;
       font-size: 22px; }
   .category-food .group-price {
     display: block;
@@ -432,7 +761,7 @@ body {
       font-size: 12px;
       border-radius: none;
       line-height: 1.5;
-      background-color: #60BA62;
+      background-color: #60ba62;
       color: #fff;
       text-transform: uppercase;
       outline: none;
@@ -447,12 +776,10 @@ body {
     .category-food .special .pendy {
       width: 263px;
       height: 70px;
-      border-left: 1px solid #e1e1e1;
-      border-right: 1px solid #e1e1e1;
-      border-bottom: 1px solid #e1e1e1; }
+      border: 1px solid #e1e1e1; }
       .category-food .special .pendy .title-special {
         border-top: 3px solid #e1e1e1;
-        padding: 25px 20px;
+        padding: 20px 25px;
         font-size: 22px; }
     .category-food .special .border-special {
       border: 1px solid #e1e1e1;
@@ -486,13 +813,11 @@ body {
 
 /* full-newletter*/
 .full-newletter {
-  background-image: url(../images/newletter.png);
-  background-repeat: no-repeat;
+  background: no-repeat url(../images/newletter.png);
   height: 300px; }
   .full-newletter .newletter {
     width: 100%;
-    height: 300px;
-    margin-top: 60px;
+    margin-top: 30px;
     display: block;
     text-align: center; }
     .full-newletter .newletter .title-newletter {
@@ -503,8 +828,7 @@ body {
       line-height: 1.5; }
     .full-newletter .newletter .text-newletter {
       color: #fff;
-      margin-top: 26px;
-      margin-bottom: 24px; }
+      margin: 26px 24px; }
   .full-newletter .contact-email {
     position: relative; }
     .full-newletter .contact-email .input-email {
@@ -524,8 +848,8 @@ body {
       border: none;
       outline: none;
       background: #439a45;
-      text-transform: uppercase;
       color: #fff;
+      text-transform: uppercase;
       cursor: pointer;
       font-size: 14px; }
       .full-newletter .contact-email .button-subscribe:hover {
@@ -552,13 +876,13 @@ body {
         .footer-content .widget-about .list-us .list-us-item .fa-log {
           width: 35px;
           padding-top: 6px;
-          color: #60BA62;
+          color: #60ba62;
           font-size: 22px;
           display: inline-block; }
     .footer-content .widget-about .panel-title {
       color: #fff;
       font-size: 22px;
-      border-left: 4px solid #60BA62;
+      border-left: 4px solid #60ba62;
       padding-left: 10px; }
   .footer-content .inforcus {
     float: right;
@@ -568,7 +892,7 @@ body {
     .footer-content .inforcus .panel-title {
       color: #fff;
       font-size: 22px;
-      border-left: 4px solid #60BA62;
+      border-left: 4px solid #60ba62;
       padding-left: 10px; }
     .footer-content .inforcus .list-gallary {
       width: 100%; }
@@ -590,28 +914,28 @@ body {
           position: relative;
           font-size: 13px;
           text-decoration: none;
-          color: #999; }
-          .footer-content .inforcus .list-gallary-item .list-extras-item a:before {
-            top: 2px;
-            left: 0;
-            content: "\f105";
-            position: absolute;
-            font-family: "fontawesome";
-            font-size: 12px;
-            line-height: normal; }
+          color: #999;
+          transition: all 0.35s ease; }
           .footer-content .inforcus .list-gallary-item .list-extras-item a:hover {
             padding-left: 12px;
-            color: #60BA62; }
+            color: #60ba62; }
+            .footer-content .inforcus .list-gallary-item .list-extras-item a:hover:before {
+              top: 2px;
+              left: 0;
+              content: "\f105";
+              position: absolute;
+              font-size: 12px;
+              line-height: normal;
+              font-family: "fontawesome"; }
 
 .copy {
   background-color: #2a2a2a;
   height: 90px; }
   .copy .copy-left {
     float: left;
-    width: 450px;
     margin-top: 28px; }
     .copy .copy-left a {
-      color: #60BA62;
+      color: #60ba62;
       text-decoration: none; }
       .copy .copy-left a:hover {
         text-decoration: underline; }
